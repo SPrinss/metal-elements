@@ -1,0 +1,27 @@
+{
+  "name": "metal-elements",
+  "version": "0.0.1",
+  "description": "Custom elements suite build on browser native functionality and some small mixins",
+  "main": "demo/index.html",
+  "scripts": {
+    "start": "es-dev-server --app-index demo/index.html --http2 --node-resolve --watch --open",
+    "start:compatibility": "es-dev-server --app-index demo/index.html --http2 --compatibility --node-resolve --watch --open",
+    "lint": "eslint --ext .js . --ignore-path .gitignore",
+    "format": "eslint --ext .js . --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "html-element-mixins": "^0.13.0",
+    "lit-html": "^1.1.2"
+  },
+  "devDependencies": {
+    "es-dev-server": "^1.40.0",
+    "eslint": "^6.6.0"
+  },
+  "author": "Wouter Vroege & Sam Prinssen",
+  "license": "MIT",
+  "keywords": [
+    "web-components",
+    "standards",
+    "html-element-mixins"
+  ]
+}
