@@ -1,0 +1,22 @@
+:host
+  display flex
+  align-items center
+  cursor pointer
+  outline none
+
+metal-button
+  --metal-button-background var(--metal-checkbox-background, var(--metal-color-highlight--50))
+  --metal-button-color var(--metal-checkbox-color, var(--metal-color-typography--20))
+  --metal-button-border-color var(--metal-checkbox-border-color, var(--metal-color-ground--80))
+  --metal-button-border-radius--no-label var(--metal-checkbox-border-radius, var(--metal-border-radius--1))
+  --metal-button-border-width var(--metal-checkbox-border-width, var(--metal-border-width, 0))
+  display flex
+  align-items center
+  justify-content center
+  padding 0
+
+label
+  padding-left var(--metal-checkbox-label-padding, var(--metal-size--2))
+  user-select none
+  cursor pointer
+  color var(--metal-checkbox-color, var(--metal-color-typography))

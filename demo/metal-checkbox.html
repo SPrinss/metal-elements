@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metal checkbox element demo</title>
+  <script type="module" src="../src/metal-checkbox/metal-checkbox.js"></script>
+
+</head>
+<link rel="stylesheet" href="/demo/theme-styles/theme-colors.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-sizings.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-border-radius.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-transitions.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-box-shadows.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-typography.css">
+<style>
+  #custom-styled-checkbox {
+    --metal-checkbox-background: var(--metal-color-highlight--80);
+    --metal-checkbox-color: var(--metal-color-typography--30);
+    --metal-checkbox-border-radius: 0%;
+    --metal-checkbox-border-color: wheat;
+    --metal-checkbox-border-width: 3px;
+    --metal-checkbox-label-padding: 12px;
+  }
+</style>
+<body>
+  <main>
+    <metal-checkbox checked></metal-checkbox>
+    <metal-checkbox id="custom-styled-checkbox"></metal-checkbox>
+  </main>
+</body>
+
+</html>
