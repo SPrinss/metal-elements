@@ -55,4 +55,5 @@ html, body {
   --metal-color-typography--70: hsl(var(--metal-color-typography--hue), var(--metal-color-typography--saturation), var(--metal-color-typography--light,70%));
   --metal-color-typography--80: hsl(var(--metal-color-typography--hue), var(--metal-color-typography--saturation), var(--metal-color-typography--light,80%));
   --metal-color-typography--90: hsl(var(--metal-color-typography--hue), var(--metal-color-typography--saturation), var(--metal-color-typography--light,90%));
+  --metal-color-typography--icon: var(--metal-color-typography--90);
 }
