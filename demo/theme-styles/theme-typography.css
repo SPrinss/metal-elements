@@ -1,0 +1,10 @@
+html, body {
+  --metal-font-family: 'Karla', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe  =I Symbol";
+
+  --metal-font-weight-base: 200;
+  --metal-font-weight--1: calc( var(--metal-font-weight-base) * 1);
+  --metal-font-weight--2: calc( var(--metal-font-weight-base) * 2);
+  --metal-font-weight--3: calc( var(--metal-font-weight-base) * 3);
+  --metal-font-weight--4: calc( var(--metal-font-weight-base) * 4);  
+  
+}
