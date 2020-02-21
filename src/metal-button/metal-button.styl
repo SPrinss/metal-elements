@@ -1,0 +1,70 @@
+:host
+  display inline-block
+  height var(--metal-button-height, var(--metal-size--7))
+
+:host([no-label]) button
+  width var(--metal-button-height, var(--metal-size--7))
+  border-radius var(--metal-button-border-radius--no-label, var(--metal-border-radius--2))
+
+button 
+  background var(--metal-button-background, var(--metal-color-highlight--50))
+  color var(--metal-button-color, var(--metal-color-typography--90))
+  border-width var(--metal-button-border-width, var(--metal-border-width, 0))
+  border-color var(--metal-button-border-color, var(--metal-color-ground--80))
+  border-style solid
+  border-radius var(--metal-button-border-radius, var(--metal-border-radius--1))
+  text-align var(--metal-button-text-align, center)
+  --metal-icon-color var(--metal-button-color, var(--metal-color-typography--90))
+
+  display flex
+  justify-content center
+  align-items center
+  width 100%
+  height 100%
+  margin 0
+  padding 0 var(--metal-size--3)
+  cursor pointer
+  user-select none
+  transition var(--metal-button-transition-time, var(--metal-transition-time)) all ease
+
+button:focus
+  background var(--metal-button-background--focus, var(--metal-button-background--hover, var(--metal-button-background, var(--metal-color-highlight--50))))
+  color var(--metal-button-color--focus, var(--metal-button-color--hover, var(--metal-button-color, var(--metal-color-typography--90))))
+  border-color var(--metal-button-border-color--focus, var(--metal-button-border-color, var(--metal-color-ground--80)))
+  --metal-icon-color var(--metal-button-color--focus, var(--metal-button-color--hover, var(--metal-button-color, var(--metal-color-typography--90))))
+  outline none
+
+button:hover
+  background var(--metal-button-background--hover, var(--metal-button-background, var(--metal-color-highlight--40)))
+  color var(--metal-button-color--hover, var(--metal-button-color, var(--metal-color-typography--90)))
+  border-color var(--metal-button-border-color--hover, var(--metal-button-border-color, var(--metal-color-ground--80)))
+  --metal-icon-color var(--metal-button-color--hover, var(--metal-button-color, var(--metal-color-typography--90)))
+
+button:active 
+  background var(--metal-button-background--active, var(--metal-button-background, var(--metal-color-highlight--30)))
+  color var(--metal-button-color--active, var(--metal-button-color, var(--metal-color-typography--90)))
+  border-color var(--metal-button-border-color--active, var(--metal-button-border-color, var(--metal-color-ground--80)))
+  --metal-icon-color var(--metal-button-color--active, var(--metal-button-color, var(--metal-color-typography--90)))
+
+button:disabled
+  background var(--metal-button-background--disabled, var(--metal-button-background, var(--metal-color-highlight--70)))
+  color var(--metal-button-color--disabled, var(--metal-button-color, var(--metal-color-typography--90)))
+  border-color var(--metal-button-border-color--disabled, var(--metal-button-border-color, var(--metal-color-ground--90)))
+  --metal-icon-color var(--metal-button-color--disabled, var(--metal-button-color, var(--metal-color-typography--90)))
+  pointer-events none
+  cursor default
+
+span 
+  flex 1
+  white-space nowrap
+  text-overflow ellipsis
+  overflow hidden
+
+span + ll-icon 
+  padding-left var(--metal-size--2)
+
+ll-icon 
+  flex none
+
+:host([no-label]) ll-icon 
+  padding 0
