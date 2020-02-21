@@ -1,0 +1,7 @@
+html, body {
+  --metal-box-shadow--1: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+  --metal-box-shadow--2: 0 4px 6px hsla(0, 0%, 0%, 0.2);
+  --metal-box-shadow--3: 0 5px 15px hsla(0, 0%, 0%, 0.2);
+  --metal-box-shadow--4: 0 10px 24px hsla(0, 0%, 0%, 0.2);
+  --metal-box-shadow--5: 0 15px 35px hsla(0, 0%, 0%, 0.2);
+}
