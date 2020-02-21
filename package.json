@@ -7,7 +7,9 @@
     "start": "es-dev-server --app-index demo/index.html --http2 --node-resolve --watch --open",
     "start:compatibility": "es-dev-server --app-index demo/index.html --http2 --compatibility --node-resolve --watch --open",
     "lint": "eslint --ext .js . --ignore-path .gitignore",
-    "format": "eslint --ext .js . --fix --ignore-path .gitignore"
+    "format": "eslint --ext .js . --fix --ignore-path .gitignore",
+    "stylus": "stylus src/**/*.styl",
+    "stylus:watch": "stylus src/**/*.styl -w"
   },
   "dependencies": {
     "html-element-mixins": "^0.13.0",
@@ -15,7 +17,8 @@
   },
   "devDependencies": {
     "es-dev-server": "^1.40.0",
-    "eslint": "^6.6.0"
+    "eslint": "^6.6.0",
+    "stylus": "^0.54.7"
   },
   "author": "Wouter Vroege & Sam Prinssen",
   "license": "MIT",
