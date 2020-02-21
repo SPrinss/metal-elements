@@ -24,6 +24,12 @@ import { MetalBaseElement, html } from '../metal-base.js'
   * @cssprop --metal-button-border-color--active
   * @cssprop --metal-button-border-color--disabled
 
+  * @cssprop --metal-button-box-shadow
+  * @cssprop --metal-button-box-shadow--focus
+  * @cssprop --metal-button-box-shadow--hover
+  * @cssprop --metal-button-box-shadow--active
+  * @cssprop --metal-button-box-shadow--disabled
+  
   * @cssprop --metal-button-border-radius
   * @cssprop --metal-button-border-radius--no-label
   * @cssprop --metal-button-transition-time

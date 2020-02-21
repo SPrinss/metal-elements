@@ -15,6 +15,7 @@ button
   border-radius var(--metal-button-border-radius, var(--metal-border-radius--1))
   text-align var(--metal-button-text-align, center)
   --metal-icon-color var(--metal-button-color, var(--metal-color-typography--90))
+  box-shadow: var(--metal-button-box-shadow, var(--metal-box-shadow--2))
 
   display flex
   justify-content center
@@ -31,6 +32,7 @@ button:focus
   background var(--metal-button-background--focus, var(--metal-button-background--hover, var(--metal-button-background, var(--metal-color-highlight--50))))
   color var(--metal-button-color--focus, var(--metal-button-color--hover, var(--metal-button-color, var(--metal-color-typography--90))))
   border-color var(--metal-button-border-color--focus, var(--metal-button-border-color, var(--metal-color-ground--80)))
+  box-shadow: var(--metal-button-box-shadow--focus, var(--metal-box-shadow--3))
   --metal-icon-color var(--metal-button-color--focus, var(--metal-button-color--hover, var(--metal-button-color, var(--metal-color-typography--90))))
   outline none
 
@@ -38,18 +40,21 @@ button:hover
   background var(--metal-button-background--hover, var(--metal-button-background, var(--metal-color-highlight--40)))
   color var(--metal-button-color--hover, var(--metal-button-color, var(--metal-color-typography--90)))
   border-color var(--metal-button-border-color--hover, var(--metal-button-border-color, var(--metal-color-ground--80)))
+  box-shadow: var(--metal-button-box-shadow--hover, var(--metal-box-shadow--3))
   --metal-icon-color var(--metal-button-color--hover, var(--metal-button-color, var(--metal-color-typography--90)))
 
 button:active 
   background var(--metal-button-background--active, var(--metal-button-background, var(--metal-color-highlight--30)))
   color var(--metal-button-color--active, var(--metal-button-color, var(--metal-color-typography--90)))
   border-color var(--metal-button-border-color--active, var(--metal-button-border-color, var(--metal-color-ground--80)))
+  box-shadow: var(--metal-button-box-shadow--active, var(--metal-box-shadow--2))
   --metal-icon-color var(--metal-button-color--active, var(--metal-button-color, var(--metal-color-typography--90)))
 
 button:disabled
   background var(--metal-button-background--disabled, var(--metal-button-background, var(--metal-color-highlight--70)))
   color var(--metal-button-color--disabled, var(--metal-button-color, var(--metal-color-typography--90)))
   border-color var(--metal-button-border-color--disabled, var(--metal-button-border-color, var(--metal-color-ground--90)))
+  box-shadow: var(--metal-button-box-shadow--disabled, var(--metal-box-shadow--1))
   --metal-icon-color var(--metal-button-color--disabled, var(--metal-button-color, var(--metal-color-typography--90)))
   pointer-events none
   cursor default
