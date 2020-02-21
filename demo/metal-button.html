@@ -11,9 +11,31 @@
 <link rel="stylesheet" href="/demo/theme-styles/theme-border-radius.css">
 <link rel="stylesheet" href="/demo/theme-styles/theme-transitions.css">
 <link rel="stylesheet" href="/demo/theme-styles/theme-box-shadows.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-typography.css">
+<style>
+  #custom-styled-button {
+   --metal-button-background: var(--metal-color-main--30);
+   --metal-button-background--focus: var(--metal-color-main--40);
+   --metal-button-background--hover: var(--metal-color-main--40);
+   --metal-button-background--active: var(--metal-color-main--40);
+   --metal-button-background--disabled: var(--metal-color-ground--30);
+
+   --metal-button-color: var(--metal-color-typography--30);
+   --metal-button-color--focus: var(--metal-color-typography--40);
+   --metal-button-color--hover: var(--metal-color-typography--40);
+   --metal-button-color--active: var(--metal-color-typography--40);
+   --metal-button-color--disabled: var(--metal-color-typography--10);
+
+   --metal-button-border-width: 4px;
+  
+   --metal-button-transition-time: 0.6sec;
+   --metal-button-font-size: var(--metal-font-size--body-4);
+  }
+</style>
 <body>
   <metal-button icon="arrow-right">Press me</metal-button>
   <metal-button>Press me</metal-button>
   <metal-button icon="arrow-right"></metal-button>
+  <metal-button id="custom-styled-button">Custom styling</metal-button>
 </body>
 </html>
