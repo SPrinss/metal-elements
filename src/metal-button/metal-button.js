@@ -1,8 +1,8 @@
 import { MetalBaseElement, html } from '../metal-base.js'
 
 /**
- * Lit light Button Component
- * @element ll-button
+ * Metal Elements Button
+ * @element metal-button
 
   * @cssprop --metal-button-background
   * @cssprop --metal-button-background--focus
