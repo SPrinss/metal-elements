@@ -34,6 +34,7 @@ import { MetalBaseElement, html } from '../metal-base.js'
   * @cssprop --metal-button-border-radius--no-label
   * @cssprop --metal-button-transition-time
   * @cssprop --metal-button-text-align
+  * @cssprop --metal-button-font-size
  * 
  */
 export default class MetalButton extends MetalBaseElement {
