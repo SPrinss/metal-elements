@@ -51,6 +51,7 @@ export default class MetalButton extends MetalBaseElement {
 
       icon: {
         set: String,
+        attribute: 'icon',
         changedHandler: '_iconChanged'
       },
 
@@ -72,7 +73,7 @@ export default class MetalButton extends MetalBaseElement {
       <link rel="stylesheet" href="/src/metal-button/metal-button.css">
       <button ?disabled="${this.disabled}" .value="${this.value}" tabindex="0">
         <span><slot></slot></span>
-        ${this.icon ? html`<ll-icon .icon="${this.icon}"></ll-icon>` : html`` }
+        ${this.icon ? html`<metal-icon icon="${this.icon}"></metal-icon>` : html`` }
       </button>
     `;
   }
@@ -84,7 +85,7 @@ export default class MetalButton extends MetalBaseElement {
   }
 
   _iconChanged() {
-    // if(this.icon) import('../metal-icon/metal-icon.js');
+    if(this.icon) import('../metal-icon/metal-icon.js');
   }
 
   _disabledChanged() {

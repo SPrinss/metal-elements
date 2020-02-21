@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metal icon element</title>
+  <script type="module" src="../src/metal-icon/metal-icon.js"></script>
+</head>
+<link rel="stylesheet" href="/demo/theme-styles/theme-colors.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-sizings.css">
+
+<style>
+  #custom-styled-icon {
+    --metal-icon-size: var(--metal-size--9);
+    --metal-icon-color: var(--metal-color-highlight--90);
+  }
+</style>
+
+<body>
+  <metal-icon id="demo" icon="arrow-left"></metal-icon>
+  <metal-icon icon="heart"></metal-icon>
+  <metal-icon id="custom-styled-icon" icon="close"></metal-icon>
+  
+  <script>
+    demo.addEventListener('icon-changed', (e) => {console.log(e.type, e.detail)})
+  </script>
+</body>
+</html>
