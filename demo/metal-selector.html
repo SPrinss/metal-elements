@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metal Elements selector</title>
+  <script type="module" src="/src/metal-selector/metal-selector.js"></script>
+</head>
+<body>
+  <style>
+    metal-selector {
+      display: block;
+      margin: 24px;
+    }
+    .metal-selected {
+      border: 2px solid black;
+    }
+  </style>
+  <metal-selector id="demo">
+    <button value="1">One</button>
+    <button value="2">Two</button>
+    <button value="3">Three</button>
+    <button value="4">Four</button>
+  </metal-selector>
+  <metal-selector id="multiDemo" multi attr-for-selected="val">
+    <button val="one">One</button>
+    <button val="two">Two</button>
+    <button val="three">Three</button>
+    <button val="four">Four</button>
+  </metal-selector>
+</body>
+<script>
+  demo.addEventListener('values-changed', (e) => {console.log(e.type, e.detail)})
+  multiDemo.addEventListener('values-changed', (e) => {console.log(e.type, e.detail)})
+</script>
+</html>
