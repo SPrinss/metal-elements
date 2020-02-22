@@ -44,7 +44,7 @@ class MetalAccordionElement extends MetalBaseElement {
 
   get template() {
     return html`
-      <link rel="stylesheet" href="/src/metal-accordion/metal-accordion.css">
+      <link rel="stylesheet" href="./src/metal-accordion/metal-accordion.css">
       ${this.values.map((val, i) => html`
         <metal-button
           .icon="${i === this.selectedIndex ? 'close' : 'add'}"

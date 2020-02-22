@@ -58,7 +58,7 @@ class MetalIconElement extends PropertyChangedEventDispatcher(PropertyChangedHan
 
   _render(viewboxValue, svgIcon) {
     this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="/src/metal-icon/metal-icon.css">
+      <link rel="stylesheet" href="./src/metal-icon/metal-icon.css">
       <svg viewBox="${viewboxValue || '0 0 24 24'}" id="metal-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         ${svgIcon}
       </svg>

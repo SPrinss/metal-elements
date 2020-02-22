@@ -33,7 +33,7 @@ class MetalProgressBarElement extends MetalBaseElement {
 
   get template() {
     return html`
-      <link rel="stylesheet" href="/src/metal-progress-bar/metal-progress-bar.css">
+      <link rel="stylesheet" href="./src/metal-progress-bar/metal-progress-bar.css">
       <div id="progress-bar">
         ${this._maxArray.map((item,i) => html`
           <span ?data-active="${(this.value > i)}"></span>

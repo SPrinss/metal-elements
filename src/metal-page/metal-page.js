@@ -10,7 +10,7 @@ import { MetalBaseElement, html } from '../metal-base.js';
 class MetalPageElement extends MetalBaseElement {
   get template() {
     return html`
-      <link rel="stylesheet" href="/src/metal-page/metal-page.css">
+      <link rel="stylesheet" href="./src/metal-page/metal-page.css">
       <header><slot name="header"></slot></header>
       <main><slot name="body"></slot></main>
       <footer><slot name="footer"></slot></footer>
