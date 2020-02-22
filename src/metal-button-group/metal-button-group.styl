@@ -1,0 +1,28 @@
+:host 
+  display block
+
+:host([switch]) metal-selector 
+  border 2px solid var(--metal-button-group-switch-border-color, var(--metal-color-ground--50))
+  padding 0
+  border-radius 5px
+  overflow hidden
+  grid-gap 0
+
+metal-selector 
+  display var(--metal-button-group-display, block)
+  grid-template-columns repeat(var(--metal-button-group-cols, var(--metal-button-group-numitems)), 1fr)
+  grid-gap var(--metal-button-group-gap-size, var(--metal-size--2))
+
+metal-button 
+  --metal-button-border-radius var(--metal-border-radius--1)
+  --metal-button-fill var(--metal-button-group-fill, var(--metal-color-ground--10))
+  --metal-button-color var(--metal-button-group-text-color, var(--metal-color-typography--90))
+  --metal-button-border-color var(--metal-button-group-border-color, transparent)
+  --metal-button-background--active var(--metal-button-group-border-color--active, var(--metal-color-ground--30))
+  --metal-button-color--active var(--metal-button-group-fill--active, var(--metal-color-typography--90))
+  margin 0
+
+:host([switch]) metal-button 
+  -metal-button-border-radius 0        
+  margin 0
+

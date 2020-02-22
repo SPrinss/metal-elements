@@ -21,6 +21,7 @@ class MetalBaseElement extends Property(HTMLElement) {
   
   propertiesChangedCallback(propNames, oldValues, newValues) {
     super.propertiesChangedCallback(propNames, oldValues, newValues);
+    console.log(propNames, oldValues, newValues)
     this.render();
   }
 
