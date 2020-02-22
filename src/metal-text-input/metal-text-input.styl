@@ -1,0 +1,47 @@
+:host
+  display block
+  position relative
+
+input
+  width 100%
+  height var(--metal-text-input-height, var(--metal-size--7))
+  font-size var(--metal-text-input-font-size, var(--metal-font-size--body-3))
+  outline none
+  border 0
+  padding 0
+  border-radius 0
+  display block 
+  border-bottom 2px solid var(--metal-text-input-border-color, var(--metal-color-typography--80))
+  transition 0.5s border-bottom-color
+  background transparent
+
+label
+  position absolute
+  top 0
+  height 100%
+  width 100%
+  display flex
+  align-items center
+  opacity 0.5
+  color var(--metal-text-input-label-color, var(--metal-color-typography--20))
+  user-select none
+  pointer-events none
+  transition 0.3s transform ease
+  transform-origin 0 0
+  transform none
+
+input:focus
+  border-bottom-color var(--metal-text-input-border-color--focus, var(--metal-color-typography--50))
+
+input:not([value='']) + label 
+  transform scale(0.8) translateY(-24px)
+  border-bottom-color var(--metal-text-input-border-color--not-empty, var(--metal-color-typography--50))
+
+:host([disabled])
+  opacity 0.5
+  pointer-events none
+  user-select none
+  cursor default
+
+:host([invalid]) input
+  border-bottom-color var(--metal-text-input-border-color--invalid, var(--metal-color-highlight--30))
