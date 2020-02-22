@@ -70,7 +70,7 @@ export default class MetalButton extends MetalBaseElement {
 
   get template() {
     return html`
-      <link rel="stylesheet" href="./src/metal-button/metal-button.css">
+      <link rel="stylesheet" href="/src/metal-button/metal-button.css">
       <button ?disabled="${this.disabled}" .value="${this.value}" tabindex="0">
         <span><slot></slot></span>
         ${this.icon ? html`<metal-icon icon="${this.icon}"></metal-icon>` : html`` }

@@ -28,7 +28,7 @@ class MetalCardElement extends MetalBaseElement {
 
   get template() {
     return html`
-      <link rel="stylesheet" href="./src/metal-card/metal-card.css">
+      <link rel="stylesheet" href="/src/metal-card/metal-card.css">
 
       <header>
         <img src="${this.imageUrl}">

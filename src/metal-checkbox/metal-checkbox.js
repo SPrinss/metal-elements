@@ -41,7 +41,7 @@ class MetalCheckboxElement extends MetalBaseElement {
 
   get template() {
     return html`
-      <link rel="stylesheet" href="./src/metal-checkbox/metal-checkbox.css">
+      <link rel="stylesheet" href="/src/metal-checkbox/metal-checkbox.css">
 
       <section>
         <metal-button
