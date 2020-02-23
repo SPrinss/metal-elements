@@ -6,6 +6,16 @@ import '../metal-selector/metal-selector.js';
  * Metal Elements Button Group
  * @element metal-button-group
  * 
+ * @cssprop --metal-button-group-background
+ * @cssprop --metal-button-group-text-color
+ * @cssprop --metal-button-group-border-color
+ * @cssprop --metal-button-group-border-width
+ * @cssprop --metal-button-group-border-radius
+ * @cssprop --metal-button-group-box-shadow
+ * 
+ * @cssprop --metal-button-group-background--selected
+ * @cssprop --metal-button-group-text-color--selected
+ * @cssprop --metal-button-group-box-shadow--selected
  */
 class MetalButtonGroupElement extends MetalBaseElement {
 
