@@ -42,12 +42,10 @@ class MetalButtonGroupElement extends MetalBaseElement {
         @values-changed="${this._valuesChanged}"
       >
         ${this.options.map(item => {
-          console.log(item)
           return html`
             <metal-button
-              .label="${item.label}"
               .value="${item.value}"
-            ></metal-button>
+            >${item.label}</metal-button>
           `;
         })}
       </metal-selector>
@@ -55,7 +53,6 @@ class MetalButtonGroupElement extends MetalBaseElement {
   }
 
   _optionsChanged() {
-    console.log(this.options)
     this.style.setProperty('--metal-button-group-numitems', this.options.length);
   }
 
