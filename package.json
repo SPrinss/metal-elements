@@ -2,14 +2,20 @@
   "name": "metal-elements",
   "version": "0.0.1",
   "description": "Custom elements suite build on browser native functionality and some small mixins",
-  "main": "demo/index.html",
+  "main": "dist/index.js",
   "scripts": {
     "start": "es-dev-server --app-index demo/index.html --http2 --node-resolve --watch --open",
     "start:compatibility": "es-dev-server --app-index demo/index.html --http2 --compatibility --node-resolve --watch --open",
     "lint": "eslint --ext .js . --ignore-path .gitignore",
     "format": "eslint --ext .js . --fix --ignore-path .gitignore",
     "stylus": "stylus src/**/*.styl",
-    "stylus:watch": "stylus src/**/*.styl -w"
+    "stylus:watch": "stylus src/**/*.styl -w",
+    "build": "rimraf dist && npm run build:copy-files && npm run build:stylus && npm run build:inline-styles && npm run build:remove-style-files",
+    "build:copy-files": "node './build-scripts/copy-folder.js' --from 'src/' --to 'dist/' --remove 'src'",
+    "build:stylus": "stylus dist/**/*.styl",
+    "build:inline-styles": "node './build-scripts/inline-styles.js' --dir dist --replaceFolder src",
+    "build:remove-style-files": "node './build-scripts/remove-style-files.js' --dir dist/",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "html-element-mixins": "^0.13.0",
@@ -18,10 +24,24 @@
   "devDependencies": {
     "es-dev-server": "^1.40.0",
     "eslint": "^6.6.0",
-    "stylus": "^0.54.7"
+    "stylus": "^0.54.7",
+    "rimraf": "^2.6.3",
+    "magic-string": "^0.25.6",
+    "stylesheet-inliner": "^0.1.0"
   },
+  "files": [
+    "dist"
+  ],
   "author": "Wouter Vroege & Sam Prinssen",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SPrinss/metal-elements.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SPrinss/metal-elements/issues"
+  },
+  "homepage": "https://github.com/SPrinss/metal-elements#readme",
   "keywords": [
     "web-components",
     "standards",
