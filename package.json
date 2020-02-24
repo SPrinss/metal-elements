@@ -4,12 +4,12 @@
   "description": "Custom elements suite build on browser native functionality and some small mixins",
   "main": "dist/index.js",
   "scripts": {
+    "dev": "concurrently --kill-others \"npm run start\" \"npm run stylus:watch\"",
     "start": "es-dev-server --app-index demo/index.html --http2 --node-resolve --watch --open",
-    "start:compatibility": "es-dev-server --app-index demo/index.html --http2 --compatibility --node-resolve --watch --open",
-    "lint": "eslint --ext .js . --ignore-path .gitignore",
     "format": "eslint --ext .js . --fix --ignore-path .gitignore",
-    "stylus": "stylus src/**/*.styl",
-    "stylus:watch": "stylus src/**/*.styl -w",
+    "compile": "npm run compile:styles",
+    "compile:styles": "npm run compile:styles",
+    "compile:styles:watch": "stylus src/**/*.styl -w",
     "build": "rimraf dist && npm run build:copy-files && npm run build:stylus && npm run build:inline-styles && npm run build:remove-style-files",
     "build:copy-files": "node './build-scripts/copy-folder.js' --from 'src/' --to 'dist/' --remove 'src'",
     "build:stylus": "stylus dist/**/*.styl",
@@ -22,12 +22,13 @@
     "lit-html": "^1.1.2"
   },
   "devDependencies": {
+    "concurrently": "^5.1.0",
     "es-dev-server": "^1.40.0",
     "eslint": "^6.6.0",
-    "stylus": "^0.54.7",
-    "rimraf": "^2.6.3",
     "magic-string": "^0.25.6",
-    "stylesheet-inliner": "^0.1.0"
+    "rimraf": "^2.6.3",
+    "stylesheet-inliner": "^0.1.0",
+    "stylus": "^0.54.7"
   },
   "files": [
     "dist"
