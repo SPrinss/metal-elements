@@ -6,7 +6,15 @@ import '../metal-button/metal-button.js'
  * @element metal-checkbox
  * 
  * @cssprop --metal-checkbox-background
+ * @cssprop --metal-checkbox-background--active
+ * @cssprop --metal-checkbox-background--focus
+ * @cssprop --metal-checkbox-background--hover
+ * @cssprop --metal-checkbox-background--disabled
  * @cssprop --metal-checkbox-color
+ * @cssprop --metal-checkbox-color--active
+ * @cssprop --metal-checkbox-color--focus
+ * @cssprop --metal-checkbox-color--hover
+ * @cssprop --metal-checkbox-color--disabled
  * @cssprop --metal-checkbox-border-radius
  * @cssprop --metal-checkbox-border-color
  * @cssprop --metal-checkbox-border-width
