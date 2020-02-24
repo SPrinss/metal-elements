@@ -5,6 +5,10 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html'
 /**
  * Metal Element Accordion
  * @element metal-accordion
+ * @slot
+ * 
+ * @fires values-changed The values of the data-accname attribute set in the slotted items.
+ * @fires selected-index-changed The index of the slotted item that is shadown
  * 
  * @cssprop --metal-accordion-button-background
  * @cssprop --metal-accordion-button-background--hover
@@ -22,10 +26,21 @@ class MetalAccordionElement extends MetalElement {
 
   static get properties() {
     return {
+      /**
+       * The values of the data-accname attribute set in the slotted items.
+       * @type {array} 
+       * @default []
+       */
       values: {
         defaultValue: [],
         changedEventName: 'values-changed'
       },
+      /**
+       * The index of the slotted item that is shadown
+       * @type {number} 
+       * @attr selected-index
+       * @default -1
+       */      
       selectedIndex: {
         set: Number,
         attribute: 'selected-index',
