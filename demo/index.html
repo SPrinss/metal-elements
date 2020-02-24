@@ -7,11 +7,8 @@
 
   <script type="module" src="/src/metal-accordion/metal-accordion.js"></script>
   <script type="module" src="/src/metal-button/metal-button.js"></script>
-  <script type="module" src="/src/metal-button-group/metal-button-group.js"></script>
-  <script type="module" src="/src/metal-card/metal-card.js"></script>
   <script type="module" src="/src/metal-checkbox/metal-checkbox.js"></script>
   <script type="module" src="/src/metal-icon/metal-icon.js"></script>
-  <script type="module" src="/src/metal-page/metal-page.js"></script>
   <script type="module" src="/src/metal-progress-bar/metal-progress-bar.js"></script>
   <script type="module" src="/src/metal-selector/metal-selector.js"></script>
   <script type="module" src="/src/metal-text-input/metal-text-input.js"></script>
@@ -24,33 +21,33 @@
 <link rel="stylesheet" href="/demo/theme-styles/theme-typography.css">
 <body>
   <style>
-    metal-page {
+    main {
       max-width: 800px;
     }
-    metal-page * {
+    main * {
       margin-bottom: 24px;
     }
   </style>
-  <metal-page>
-    <metal-progress-bar slot="header"></metal-progress-bar>
-    <metal-card slot="body" image-url="https://placehold.it/800x450"><metal-button>Some card button</metal-button></metal-card>
-    <metal-selector slot="body">
+  <main>
+    <metal-progress-bar></metal-progress-bar>
+
+    <metal-selector>
       <metal-button value="1">1</metal-button>
       <metal-button value="2">2</metal-button>
       <metal-button value="3">3</metal-button>
     </metal-selector>
 
-    <metal-text-input slot="body"></metal-text-input>
-    <metal-checkbox slot="body" label="Check me out"></metal-checkbox>
+    <metal-text-input name="Try me"></metal-text-input>
+    <metal-checkbox label="Check me out"></metal-checkbox>
 
-    <metal-accordion slot="footer">
+    <metal-accordion>
       <article data-accname="A very important question?">Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue.</article>
       <article data-accname="But what if a bird becomes a bee?">Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue.</article>
     </metal-accordion>
 
     <metal-icon icon="arrow-left"></metal-icon>
     
-  </metal-page>
+  </main>
 
 </body>
 </html>
