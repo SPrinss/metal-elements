@@ -8,6 +8,7 @@ class MetalElement extends Property(HTMLElement) {
 
   constructor() {
     super();
+    this.constructor.__setDefaultPropertyValues.call(this);
     this.attachShadow({mode: 'open'});
   }
   
@@ -27,6 +28,13 @@ class MetalElement extends Property(HTMLElement) {
   render() {
     if(window.ShadyCSS) return this.__shadyRender();
     this.__shadowRender();
+  }
+
+  static __setDefaultPropertyValues() {
+    for(var propName in this.constructor.properties) {
+      const defaultValue = this.constructor.properties[propName].defaultValue;
+      this[propName] = defaultValue;
+    }
   }
 
   __shadyRender() {
