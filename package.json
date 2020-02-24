@@ -4,10 +4,11 @@
   "description": "Custom elements suite build on browser native functionality and some small mixins",
   "main": "dist/index.js",
   "scripts": {
-    "start": "concurrently --kill-others \"npm run start:server::watch\" \"npm run compile:styles::watch\"",
+    "start": "npm run docs && concurrently --kill-others \"npm run start:server::watch\" \"npm run compile:styles::watch\"",
     "start:server::watch": "es-dev-server --app-index demo/index.html --http2 --node-resolve --watch --open",
     "format": "npm run format:javascript",
     "format:javascript": "eslint --ext .js . --fix --ignore-path .gitignore",
+    "docs": "wca analyze src/ --outFile custom-elements.json",
     "compile": "npm run compile:styles",
     "compile:styles": "npm run compile:styles",
     "compile:styles::watch": "stylus src/**/*.styl -w",
@@ -31,7 +32,8 @@
     "magic-string": "^0.25.6",
     "rimraf": "^2.6.3",
     "stylesheet-inliner": "^0.4.0",
-    "stylus": "^0.54.7"
+    "stylus": "^0.54.7",
+    "web-component-analyzer": "^1.0.3"
   },
   "files": [
     "dist"
