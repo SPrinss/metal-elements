@@ -80,8 +80,8 @@ class MetalTextInputElement extends MetalElement {
     return html`
       <link rel="stylesheet" href="/src/metal-text-input/metal-text-input.css">
       <input
-        .type="${this.type}"
-        .value="${this.value}"
+        type="${this.type}"
+        value="${this.value}"
         ?disabled="${this.disabled}"
         @input="${this._handleInput}"
       >
