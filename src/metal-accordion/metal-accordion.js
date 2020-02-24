@@ -1,4 +1,4 @@
-import { MetalBaseElement, html } from '../metal-base.js';
+import { MetalElement, html } from '../metal-element.js';
 import '../metal-button/metal-button.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html'
 
@@ -9,15 +9,16 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html'
  * @cssprop --metal-accordion-button-background
  * @cssprop --metal-accordion-button-background--hover
  * @cssprop --metal-accordion-button-background--active
- * @cssprop --metal-accordion-button-background--open
  * @cssprop --metal-accordion-button-color
- * @cssprop --metal-accordion-button-color--open
- * @cssprop --metal-accordion-item-background
- * @cssprop --metal-accordion-item-margin-bottom
- * @cssprop --metal-accordion-item-padding
+ * @cssprop --metal-accordion-color--active
+ * @cssprop --metal-accordion-color--focus
+ * @cssprop --metal-accordion-color--hover
+ * @cssprop --metal-accordion-container-background
+ * @cssprop --metal-accordion-container-margin-bottom
+ * @cssprop --metal-accordion-container-color
  * 
  */
-class MetalAccordionElement extends MetalBaseElement {
+class MetalAccordionElement extends MetalElement {
 
   static get properties() {
     return {

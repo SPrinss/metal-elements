@@ -1,4 +1,4 @@
-import { MetalBaseElement, html } from '../metal-base.js';
+import { MetalElement, html } from '../metal-element.js';
 
 /**
  * Metal Elements Progress Bar
@@ -9,7 +9,7 @@ import { MetalBaseElement, html } from '../metal-base.js';
  * @cssprop --metal-progress-bar-border-radius
  * 
  */
-class MetalProgressBarElement extends MetalBaseElement {
+class MetalProgressBarElement extends MetalElement {
   
   static get properties() {
     return {

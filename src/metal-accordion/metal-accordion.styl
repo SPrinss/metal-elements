@@ -6,14 +6,13 @@ metal-button
   --metal-button-background var(--metal-accordion-button-background, var(--metal-color-ground--90))
   --metal-button-background--hover var(--metal-accordion-button-background--hover, var(--metal-color-ground--80))
   --metal-button-background--active var(--metal-accordion-button-background--active, var(--metal-color-ground--80))
+  --metal-button-background--focus var(--metal-accordion-button-background--hover, var(--metal-color-ground--80))
   --metal-button-color var(--metal-accordion-button-color, var(--metal-color-typography--10))
+  --metal-button-color--active var(--metal-accordion-color--active, var(--metal-color-typography--10))
+  --metal-button-color--focus var(--metal-accordion-color--focus, var(--metal-color-typography--10))
+  --metal-button-color--hover var(--metal-accordion-color--hover, var(--metal-color-typography--10))
   --metal-button-border-radius 0
   display block
-
-metal-button[data-opened]
-  --metal-button-text-align start
-  --metal-button-background var(--metal-accordion-button-background--open, var(--metal-button-background--active, var(--metal-color-ground--90)))
-  --metal-button-color var(--metal-accordion-button-color--open, var(--metal-button-color--active, var(--metal-color-typography--10)))
 
 #slotContainer
   display none
@@ -22,10 +21,11 @@ metal-button[data-opened]
   box-sizing border-box
   width 100%
   max-height var(--container-height, 0)
-  background var(--metal-accordion-item-background, var(--metal-color-ground--90))
-  margin-bottom var(--metal-accordion-item-margin-bottom, var(--metal-size--1))
+  background var(--metal-accordion-container-background, var(--metal-color-ground--90))
+  margin-bottom var(--metal-accordion-container-margin-bottom, var(--metal-size--1))
+  color var(--metal-accordion-container-color, var(--metal-color-typography--10))
   overflow hidden
   transition max-height 0.2s ease-out
 
 .container > *
-  padding var(--metal-accordion-item-padding, var(--metal-size--4))  
+  padding var(--metal-accordion-container-padding, var(--metal-size--4))

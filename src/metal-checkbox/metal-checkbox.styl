@@ -5,11 +5,19 @@
   outline none
 
 metal-button
-  --metal-button-background var(--metal-checkbox-background, var(--metal-color-highlight--50))
+  --metal-button-background var(--metal-checkbox-background, transparent)
+  --metal-button-background--active var(--metal-checkbox-background--active, transparent)
+  --metal-button-background--focus var(--metal-checkbox-background--focus, transparent)
+  --metal-button-background--hover var(--metal-checkbox-background--hover, transparent)
+  --metal-button-background--disabled var(--metal-checkbox-background--disabled, transparent)
   --metal-button-color var(--metal-checkbox-color, var(--metal-color-typography--20))
-  --metal-button-border-color var(--metal-checkbox-border-color, var(--metal-color-ground--80))
+  --metal-button-color--active var(--metal-checkbox-color--active, var(--metal-color-typography--20))
+  --metal-button-color--focus var(--metal-checkbox-color--focus, var(--metal-color-typography--20))
+  --metal-button-color--hover var(--metal-checkbox-color--hover, var(--metal-color-typography--20))
+  --metal-button-color--disabled var(--metal-checkbox-color--disabled, var(--metal-color-typography--20))
+  --metal-button-border-color var(--metal-checkbox-border-color, var(--metal-color-typography--20))
   --metal-button-border-radius--no-label var(--metal-checkbox-border-radius, var(--metal-border-radius--1))
-  --metal-button-border-width var(--metal-checkbox-border-width, var(--metal-border-width, 0))
+  --metal-button-border-width var(--metal-checkbox-border-width, 0)
   display flex
   align-items center
   justify-content center

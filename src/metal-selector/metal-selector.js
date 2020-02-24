@@ -1,4 +1,4 @@
-import { MetalBaseElement, html } from '../metal-base.js';
+import { MetalElement, html } from '../metal-element.js';
 
 /**
  * Metal Elements Selector
@@ -6,7 +6,7 @@ import { MetalBaseElement, html } from '../metal-base.js';
  * @slot
  * 
  */
-class MetalSelectorElement extends MetalBaseElement {
+class MetalSelectorElement extends MetalElement {
 
   static get properties() {
     return {
