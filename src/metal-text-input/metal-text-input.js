@@ -34,8 +34,8 @@ class MetalTextInputElement extends MetalElement {
        * @default ''
        */
       value: {
-        set: function(val) { return this['__value'] = String(val || '')},
-        get: function () { return this['invalid'] ? '' : this['__value']},
+        set: String,
+        get: function () { return this['invalid'] ? '' : this['#value']},
         attribute: 'value',
         defaultValue: '',
         changedEventName: 'value-changed'
