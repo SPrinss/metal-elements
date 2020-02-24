@@ -22,7 +22,7 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html'
  * @cssprop --metal-accordion-container-color
  * 
  */
-class MetalAccordionElement extends MetalElement {
+export class MetalAccordionElement extends MetalElement {
 
   static get properties() {
     return {

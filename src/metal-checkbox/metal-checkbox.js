@@ -21,7 +21,7 @@ import '../metal-button/metal-button.js'
  * @cssprop --metal-checkbox-label-padding
  * 
  */
-class MetalCheckboxElement extends MetalElement {
+export class MetalCheckboxElement extends MetalElement {
 
   static get properties() {
     return {

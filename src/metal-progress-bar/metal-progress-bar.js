@@ -9,7 +9,7 @@ import { MetalElement, html } from '../metal-element.js';
  * @cssprop --metal-progress-bar-border-radius
  * 
  */
-class MetalProgressBarElement extends MetalElement {
+export class MetalProgressBarElement extends MetalElement {
   
   static get properties() {
     return {

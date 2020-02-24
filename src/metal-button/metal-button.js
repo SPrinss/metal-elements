@@ -38,7 +38,7 @@ import { MetalElement, html } from '../metal-element.js'
  * @cssprop --metal-button-font-size
  * 
  */
-export default class MetalButton extends MetalElement {
+export class MetalButtonElement extends MetalElement {
 
   static get properties() {
     return { 
@@ -118,4 +118,4 @@ export default class MetalButton extends MetalElement {
 
 }
 
-window.customElements.define('metal-button', MetalButton)
+window.customElements.define('metal-button', MetalButtonElement)

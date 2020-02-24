@@ -12,7 +12,7 @@ import { MetalElement, html } from '../metal-element.js';
  * @cssprop --metal-text-input-border-color--invalid
  * @cssprop --metal-text-input-label-color
  */
-class MetalTextInputElement extends MetalElement {
+export class MetalTextInputElement extends MetalElement {
 
   static get properties() {
     return {

@@ -8,7 +8,7 @@ import { MetalElement, html } from '../metal-element.js';
  * @fires values-changed Values of attributes of slotted content, defined by attrForSelected, that have been selected.
  * 
  */
-class MetalSelectorElement extends MetalElement {
+export class MetalSelectorElement extends MetalElement {
 
   static get properties() {
     return {

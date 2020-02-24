@@ -9,7 +9,7 @@ import { PropertyChangedHandler, PropertyChangedEventDispatcher, PropertyObserve
  * 
  */
 
-class MetalIconElement extends PropertyChangedEventDispatcher(PropertyChangedHandler(PropertyReflector(PropertyObserver(HTMLElement)))) { 
+export class MetalIconElement extends PropertyChangedEventDispatcher(PropertyChangedHandler(PropertyReflector(PropertyObserver(HTMLElement)))) { 
 
   constructor() {
     super();
