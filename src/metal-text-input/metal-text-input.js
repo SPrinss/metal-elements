@@ -1,4 +1,4 @@
-import { MetalBaseElement, html } from '../metal-base.js';
+import { MetalElement, html } from '../metal-element.js';
 
 /**
  * Metal Elements Text Input
@@ -11,7 +11,7 @@ import { MetalBaseElement, html } from '../metal-base.js';
  * @cssprop --metal-text-input-border-color--invalid
  * @cssprop --metal-text-input-label-color
  */
-class MetalTextInputElement extends MetalBaseElement {
+class MetalTextInputElement extends MetalElement {
 
   static get properties() {
     return {

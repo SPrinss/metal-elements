@@ -1,4 +1,4 @@
-import { MetalBaseElement, html } from '../metal-base.js'
+import { MetalElement, html } from '../metal-element.js'
 
 /**
  * Metal Elements Button
@@ -37,7 +37,7 @@ import { MetalBaseElement, html } from '../metal-base.js'
   * @cssprop --metal-button-font-size
  * 
  */
-export default class MetalButton extends MetalBaseElement {
+export default class MetalButton extends MetalElement {
 
   static get properties() {
     return { 

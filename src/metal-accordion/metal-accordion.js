@@ -1,4 +1,4 @@
-import { MetalBaseElement, html } from '../metal-base.js';
+import { MetalElement, html } from '../metal-element.js';
 import '../metal-button/metal-button.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html'
 
@@ -17,7 +17,7 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html'
  * @cssprop --metal-accordion-item-padding
  * 
  */
-class MetalAccordionElement extends MetalBaseElement {
+class MetalAccordionElement extends MetalElement {
 
   static get properties() {
     return {

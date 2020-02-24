@@ -1,4 +1,4 @@
-import { MetalBaseElement, html } from '../metal-base.js';
+import { MetalElement, html } from '../metal-element.js';
 import '../metal-button/metal-button.js'
 
 /**
@@ -13,7 +13,7 @@ import '../metal-button/metal-button.js'
  * @cssprop --metal-checkbox-label-padding
  * 
  */
-class MetalCheckboxElement extends MetalBaseElement {
+class MetalCheckboxElement extends MetalElement {
 
   static get properties() {
     return {
