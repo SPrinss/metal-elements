@@ -1,7 +1,7 @@
 import { Property } from 'html-element-mixins';
 import { html } from 'lit-html';
 
-class MetalBaseElement extends Property(HTMLElement) {
+class MetalElement extends Property(HTMLElement) {
   static get properties() {
     return {}
   }
@@ -39,4 +39,4 @@ class MetalBaseElement extends Property(HTMLElement) {
 
 }
 
-export { MetalBaseElement, html };
+export { MetalElement, html };
