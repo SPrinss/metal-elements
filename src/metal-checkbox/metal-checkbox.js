@@ -23,7 +23,8 @@ class MetalCheckboxElement extends MetalBaseElement {
         attribute: 'checked'
       },
       label: {
-        set: String
+        set: String,
+        attribute: 'label'
       }
     }
   }
@@ -46,7 +47,6 @@ class MetalCheckboxElement extends MetalBaseElement {
       <section>
         <metal-button
           .icon="${this.checked ? 'done' : ''}"
-          label=""
         ></metal-button>
       </section>
       <label>${this.label}</label>

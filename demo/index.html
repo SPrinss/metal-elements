@@ -4,8 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Metal elements demo</title>
+
+  <script type="module" src="/src/metal-accordion/metal-accordion.js"></script>
+  <script type="module" src="/src/metal-button/metal-button.js"></script>
+  <script type="module" src="/src/metal-checkbox/metal-checkbox.js"></script>
+  <script type="module" src="/src/metal-icon/metal-icon.js"></script>
+  <script type="module" src="/src/metal-progress-bar/metal-progress-bar.js"></script>
+  <script type="module" src="/src/metal-selector/metal-selector.js"></script>
+  <script type="module" src="/src/metal-text-input/metal-text-input.js"></script>
 </head>
+<link rel="stylesheet" href="/demo/theme-styles/theme-border-radius.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-box-shadows.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-colors.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-sizings.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-transitions.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-typography.css">
 <body>
-  
+  <style>
+    main {
+      max-width: 800px;
+    }
+    main * {
+      margin-bottom: 24px;
+    }
+  </style>
+  <main>
+    <metal-progress-bar></metal-progress-bar>
+
+    <metal-selector>
+      <metal-button value="1">1</metal-button>
+      <metal-button value="2">2</metal-button>
+      <metal-button value="3">3</metal-button>
+    </metal-selector>
+
+    <metal-text-input name="Try me"></metal-text-input>
+    <metal-checkbox label="Check me out"></metal-checkbox>
+
+    <metal-accordion>
+      <article data-accname="A very important question?">Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue.</article>
+      <article data-accname="But what if a bird becomes a bee?">Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue.</article>
+    </metal-accordion>
+
+    <metal-icon icon="arrow-left"></metal-icon>
+    
+  </main>
+
 </body>
 </html>
