@@ -17,6 +17,7 @@ class MetalElement extends Property(HTMLElement) {
   }
 
   connectedCallback() {
+    super.connectedCallback && super.connectedCallback();
     this.render();
   }
   

@@ -1,15 +1,13 @@
 :host
   display inline-block
   height var(--metal-button-height, var(--metal-size--7))
+  min-width var(--metal-button-height, var(--metal-size--7))
   vertical-align middle
-
-:host([no-label]) button
-  width var(--metal-button-height, var(--metal-size--7))
-  border-radius var(--metal-button-border-radius--no-label, 50%)
 
 button 
   background var(--metal-button-background, var(--metal-color-highlight--50))
   color var(--metal-button-color, var(--metal-color-typography--90))
+  width var(--metal-button-height, var(--metal-size--7))
   border-width var(--metal-button-border-width, 0)
   border-color var(--metal-button-border-color, var(--metal-color-ground--80))
   border-style solid
@@ -29,6 +27,9 @@ button
   user-select none
   transition var(--metal-button-transition-time, var(--metal-transition-time)) all ease
   font-size var(--metal-button-font-size, var(--metal-font-size--body-3))
+
+button[data-icon]
+  border-radius var(--metal-button-border-radius--no-label, 50%)
 
 button:focus
   background var(--metal-button-background--focus, var(--metal-color-highlight--50))
@@ -67,11 +68,8 @@ span
   text-overflow ellipsis
   overflow hidden
 
-span + metal-icon 
+span:not([hidden]) + metal-icon
   padding-left var(--metal-size--2)
 
 metal-icon 
   flex none
-
-:host([no-label]) metal-icon 
-  padding 0

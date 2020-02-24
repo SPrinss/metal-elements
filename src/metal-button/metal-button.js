@@ -38,7 +38,7 @@ import { MetalElement, html } from '../metal-element.js';
  * @cssprop --metal-button-font-size
  * 
  */
-export class MetalButtonElement extends MetalElement {
+export default class MetalButtonElement extends MetalElement {
 
   static get properties() {
     return { 
@@ -70,17 +70,12 @@ export class MetalButtonElement extends MetalElement {
        * @default ''
        */
       value: {
-        set: String
+        set: String,
       }
 
     };
   }
-
-  constructor() {
-    super();
-    this.setAttribute('no-label', '');
-  }
-  
+   
   connectedCallback() {
     super.connectedCallback();
     this.shadowRoot.addEventListener('slotchange', this._handleSlotChange.bind(this));
@@ -89,25 +84,23 @@ export class MetalButtonElement extends MetalElement {
   get template() {
     return html`
       <link rel="stylesheet" href="../src/metal-button/metal-button.css">
-      <button ?disabled="${this.disabled}" .value="${this.value}" tabindex="0">
-        <span><slot></slot></span>
+      <button ?data-icon="${!this._hasLabel}" ?disabled="${this.disabled}" .value="${this.value}" tabindex="0">
+        <span ?hidden="${!this._hasLabel}"><slot></slot></span>
         ${this.icon ? html`<metal-icon icon="${this.icon}"></metal-icon>` : html`` }
       </button>
     `;
   }
 
   _handleSlotChange(e) {
-    const noLabel = e.target.assignedNodes().length === 0;
-    if(noLabel) return this.setAttribute('no-label', '');
-    this.removeAttribute('no-label');
+    this._hasLabel = e.target.assignedNodes().length > 0;
   }
 
-  _iconChanged() {
-    if(this.icon) import('../metal-icon/metal-icon.js');
+  _iconChanged(icon) {
+    if(icon) import('../metal-icon/metal-icon.js');
   }
 
-  _disabledChanged() {
-    if(this.disabled) {
+  _disabledChanged(disabled) {
+    if(disabled) {
       this.removeAttribute('tabindex');
       this.setAttribute('aria-disabled', 'true');
     } else {
