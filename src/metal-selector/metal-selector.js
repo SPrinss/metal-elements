@@ -5,31 +5,58 @@ import { MetalElement, html } from '../metal-element.js';
  * @element metal-selector
  * @slot
  * 
+ * @fires values-changed Values of attributes of slotted content, defined by attrForSelected, that have been selected.
+ * 
  */
-class MetalSelectorElement extends MetalElement {
+export class MetalSelectorElement extends MetalElement {
 
   static get properties() {
     return {
+      /**
+       * Values of attributes of slotted content, defined by attrForSelected.
+       * @type {array} 
+       * @default []
+       */      
       options: {
         defaultValue: []
       },
+      /**
+       * Values of attributes of slotted content, defined by attrForSelected, that have been selected.
+       * @type {array} 
+       * @default []
+       */
       values: {
         defaultValue: [],
         changedEventName: 'values-changed'
       },
-      value: {
-        set: String
-      },
+      /**
+       * Whether multiple options can be selected
+       * @type {boolean} 
+       * @attr multi
+       * @default false
+       */
       multi: {
         set: Boolean,
-        defaultValue: false,
-        attribute: 'multi'
+        attribute: 'multi',
+        defaultValue: false
       },
+      /**
+       * The attribute name that should be used as value
+       * @type {string} 
+       * @attr attr-for-selected
+       * @default 'value'
+       */
       attrForSelected: {
         set: String,
         attribute: 'attr-for-selected',
         defaultValue: 'value'
       },
+      /**
+       * The class name that should be set when an option is selected
+       * @type {string} 
+       * @attr selected-class-name
+       * @default 'metal-selected'
+       */
       selectedClassName: {
         set: String,
         attribute: 'selected-class-name',

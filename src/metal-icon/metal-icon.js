@@ -9,7 +9,7 @@ import { PropertyChangedHandler, PropertyChangedEventDispatcher, PropertyObserve
  * 
  */
 
-class MetalIconElement extends PropertyChangedEventDispatcher(PropertyChangedHandler(PropertyReflector(PropertyObserver(HTMLElement)))) { 
+export class MetalIconElement extends PropertyChangedEventDispatcher(PropertyChangedHandler(PropertyReflector(PropertyObserver(HTMLElement)))) { 
 
   constructor() {
     super();
@@ -18,6 +18,12 @@ class MetalIconElement extends PropertyChangedEventDispatcher(PropertyChangedHan
 
   static get propertyAccessors() {
     return {
+      /**
+       * The name of the icon that should be displayed
+       * @type {string} 
+       * @typedef { arrow-left | arrow-down | arrow-right | close | add | logo | heart | done | pencil }
+       * @default ''
+       */      
       icon: {set: String}
     };
   }
@@ -65,6 +71,11 @@ class MetalIconElement extends PropertyChangedEventDispatcher(PropertyChangedHan
     `;
   }
 
+  /**
+  * Getter that returns svg content based on this.icon name
+  * @type {object}
+  * @return {string} The content belonging to the this.icon name
+  */  
   get svgIcon() {
     const ICONS = {
       'arrow-left': `
@@ -122,16 +133,16 @@ class MetalIconElement extends PropertyChangedEventDispatcher(PropertyChangedHan
         <path d="M1 9.10811L5.37863 13.881C6.32068 14.9079 7.99783 14.6807 8.63275 13.4402L15 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </g>
       `,
-      '__empty': `
-        <g></g>
-      `,
       'pencil': `
       <g viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="17.821" y="1.17894" width="5" height="19" transform="rotate(45 17.821 1.17894)" stroke-linejoin="round"/>
         <path d="M4.38599 14.614L7.92152 18.1495L2.61822 19.9173L4.38599 14.614Z" stroke-linejoin="round"/>
         <path d="M3.67896 16.7353L5.80028 18.8566L2.61829 19.9173L3.67896 16.7353Z" fill="black"/>
         <line x1="19.5888" y1="2.58883" x2="6.15375" y2="16.0239"/>
-      </svg>      
+      </svg>
+      `,      
+      '__empty': `
+        <g></g>
       `
     };
     return ICONS[this.icon || 'empty'];
