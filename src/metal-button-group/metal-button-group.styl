@@ -1,0 +1,33 @@
+:host 
+  display block
+
+:host([switch]) metal-selector 
+  border 2px solid var(--metal-button-group-switch-border-color, var(--metal-color-ground--50))
+  padding 0
+  border-radius 5px
+  overflow hidden
+  grid-gap 0
+
+metal-selector 
+  display var(--metal-button-group-display, block)
+  grid-template-columns repeat(var(--metal-button-group-cols, var(--metal-button-group-numitems)), 1fr)
+  grid-gap var(--metal-button-group-gap-size, var(--metal-size--2))
+
+metal-button 
+  --metal-button-background var(--metal-button-group-background, var(--metal-color-main--50))
+  --metal-button-color var(--metal-button-group-text-color, var(--metal-color-typography--90))
+  --metal-button-border-color var(--metal-button-group-border-color, transparent)
+  --metal-button-border-width var(--metal-button-group-border-width, 0)
+  --metal-button-border-radius var(--metal-button-group-border-radius, var(--metal-border-radius--1))
+  --metal-button-box-shadow var(--metal-button-group-box-shadow, var(--metal-box-shadow--2))
+  margin 0
+
+metal-button.metal-selected
+  --metal-button-background var(--metal-button-group-background--selected, var(--metal-button-group-background, var(--metal-color-main--20)))
+  --metal-button-color var(--metal-button-group-text-color--selected, var(--metal-button-group-text-color, var(--metal-color-typography--90)))
+  --metal-button-box-shadow var(--metal-button-group-box-shadow--selected, var(--metal-box-shadow--3))
+
+:host([switch]) metal-button 
+  -metal-button-border-radius 0        
+  margin 0
+
