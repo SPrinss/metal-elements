@@ -64,7 +64,6 @@ export default class MetalButton extends MetalElement {
         attribute: 'icon',
         changedHandler: '_iconChanged'
       },
-    this.setAttribute('no-label', '');
       /**
        * What, if any, text should be displayed on the button. Leave empty to hide text.
        * @type {string} 
@@ -75,6 +74,11 @@ export default class MetalButton extends MetalElement {
       }
 
     };
+  }
+
+  constructor() {
+    super();
+    this.setAttribute('no-label', '');
   }
   
   connectedCallback() {
