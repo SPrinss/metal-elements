@@ -1,4 +1,4 @@
-import { MetalElement, html } from '../metal-element.js'
+import { MetalElement, html } from '../metal-element.js';
 
 /**
  * Metal Elements Button
@@ -70,7 +70,7 @@ export default class MetalButton extends MetalElement {
 
   get template() {
     return html`
-      <link rel="stylesheet" href="/src/metal-button/metal-button.css">
+      <link rel="stylesheet" href="../src/metal-button/metal-button.css">
       <button ?disabled="${this.disabled}" .value="${this.value}" tabindex="0">
         <span><slot></slot></span>
         ${this.icon ? html`<metal-icon icon="${this.icon}"></metal-icon>` : html`` }
@@ -101,4 +101,4 @@ export default class MetalButton extends MetalElement {
 
 }
 
-window.customElements.define('metal-button', MetalButton)
+window.customElements.define('metal-button', MetalButton);

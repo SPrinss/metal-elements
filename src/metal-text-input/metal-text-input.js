@@ -21,8 +21,8 @@ class MetalTextInputElement extends MetalElement {
         defaultValue: 'text'
       },
       value: {
-        set: function(val) { return this['__value'] = String(val || '')},
-        get: function () { return this['invalid'] ? '' : this['__value']},
+        set: function(val) { return this['__value'] = String(val || '');},
+        get: function () { return this['invalid'] ? '' : this['__value'];},
         attribute: 'value',
         changedEventName: 'value-changed'
       },
@@ -41,12 +41,12 @@ class MetalTextInputElement extends MetalElement {
         attribute: 'invalid',
         defaultValue: false
       }
-    }
+    };
   }
 
   get template() {
     return html`
-      <link rel="stylesheet" href="/src/metal-text-input/metal-text-input.css">
+      <link rel="stylesheet" href="./metal-text-input.css">
       <input
         type="${this.type}"
         value="${this.value}"

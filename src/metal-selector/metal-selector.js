@@ -39,8 +39,8 @@ class MetalSelectorElement extends MetalElement {
         defaultValue: [],
         changedHandler: '_childrenChanged'
       }
-    }
-  };
+    };
+  }
 
   constructor() {
     super();
@@ -50,7 +50,7 @@ class MetalSelectorElement extends MetalElement {
   static get propertiesChangedHandlers() {
     return {
       '_valuesChanged': ['values', '_children']
-    }
+    };
   }
 
   get template() {
@@ -75,7 +75,7 @@ class MetalSelectorElement extends MetalElement {
     (children || []).map(item => {
       const itemIsAdded = oldValues.indexOf(item) === -1;
       if(itemIsAdded) this._addClickEvent(item);
-    })
+    });
   }
 
   _addClickEvent(item) {

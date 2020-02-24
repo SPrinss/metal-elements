@@ -1,5 +1,5 @@
 import { MetalElement, html } from '../metal-element.js';
-import '../metal-button/metal-button.js'
+import '../metal-button/metal-button.js';
 
 /**
  * Metal Elements Checkbox
@@ -34,7 +34,7 @@ class MetalCheckboxElement extends MetalElement {
         set: String,
         attribute: 'label'
       }
-    }
+    };
   }
 
   constructor() {
@@ -45,12 +45,12 @@ class MetalCheckboxElement extends MetalElement {
   static get ensuredAttributes() {
     return {
       tabIndex: 0
-    }
+    };
   }
 
   get template() {
     return html`
-      <link rel="stylesheet" href="/src/metal-checkbox/metal-checkbox.css">
+      <link rel="stylesheet" href="../src/metal-checkbox/metal-checkbox.css">
 
       <section>
         <metal-button

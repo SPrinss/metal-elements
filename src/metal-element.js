@@ -3,7 +3,7 @@ import { html } from 'lit-html';
 
 class MetalElement extends Property(HTMLElement) {
   static get properties() {
-    return {}
+    return {};
   }
 
   constructor() {

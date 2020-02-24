@@ -1,6 +1,6 @@
 import { MetalElement, html } from '../metal-element.js';
 import '../metal-button/metal-button.js';
-import { unsafeHTML } from 'lit-html/directives/unsafe-html'
+import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 
 /**
  * Metal Element Accordion
@@ -33,7 +33,7 @@ class MetalAccordionElement extends MetalElement {
         changedEventName: 'selected-index-changed',
         defaultValue: -1
       }
-    }
+    };
   }
 
   constructor() {
@@ -45,7 +45,7 @@ class MetalAccordionElement extends MetalElement {
 
   get template() {
     return html`
-      <link rel="stylesheet" href="/src/metal-accordion/metal-accordion.css">
+      <link rel="stylesheet" href="../src/metal-accordion/metal-accordion.css">
       ${this.values.map((val, i) => html`
         <metal-button
           .icon="${i === this.selectedIndex ? 'close' : 'add'}"

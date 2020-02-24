@@ -4,17 +4,18 @@
   "description": "Custom elements suite build on browser native functionality and some small mixins",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "concurrently --kill-others \"npm run start\" \"npm run stylus:watch\"",
-    "start": "es-dev-server --app-index demo/index.html --http2 --node-resolve --watch --open",
-    "format": "eslint --ext .js . --fix --ignore-path .gitignore",
+    "start": "concurrently --kill-others \"npm run start:server::watch\" \"npm run compile:styles::watch\"",
+    "start:server::watch": "es-dev-server --app-index demo/index.html --http2 --node-resolve --watch --open",
+    "format": "npm run format:javascript",
+    "format:javascript": "eslint --ext .js . --fix --ignore-path .gitignore",
     "compile": "npm run compile:styles",
     "compile:styles": "npm run compile:styles",
-    "compile:styles:watch": "stylus src/**/*.styl -w",
-    "build": "rimraf dist && npm run build:copy-files && npm run build:stylus && npm run build:inline-styles && npm run build:remove-style-files",
-    "build:copy-files": "node './build-scripts/copy-folder.js' --from 'src/' --to 'dist/' --remove 'src'",
-    "build:stylus": "stylus dist/**/*.styl",
-    "build:inline-styles": "node './build-scripts/inline-styles.js' --dir dist --replaceFolder src",
-    "build:remove-style-files": "node './build-scripts/remove-style-files.js' --dir dist/",
+    "compile:styles::watch": "stylus src/**/*.styl -w",
+    "compile:styles::dist": "stylus dist/**/*.styl",
+    "build": "npm run build:init && npm run build:styles && npm run build:finish",
+    "build:init": "rimraf dist && copyfiles -u 1 ./src/** dist && copyfiles -u 1 ./src/**/** dist",
+    "build:styles": "npm run compile:styles::dist && stylesheet-inliner --input=dist/metal-button/**.js",
+    "build:finish": "del dist/**/**.styl && del dist/**/**.css",
     "prepublish": "npm run build"
   },
   "dependencies": {
@@ -23,11 +24,13 @@
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
+    "copyfiles": "^2.2.0",
+    "del-cli": "^3.0.0",
     "es-dev-server": "^1.40.0",
     "eslint": "^6.6.0",
     "magic-string": "^0.25.6",
     "rimraf": "^2.6.3",
-    "stylesheet-inliner": "^0.1.0",
+    "stylesheet-inliner": "^0.4.0",
     "stylus": "^0.54.7"
   },
   "files": [
