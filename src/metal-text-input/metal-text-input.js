@@ -78,7 +78,7 @@ export class MetalTextInputElement extends MetalElement {
 
   get template() {
     return html`
-      <link rel="stylesheet" href="./metal-text-input.css">
+      <link rel="stylesheet" href="../src/metal-text-input/metal-text-input.css">
       <input
         type="${this.type}"
         value="${this.value}"

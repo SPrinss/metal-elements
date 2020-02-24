@@ -14,7 +14,7 @@
     "compile:styles::dist": "stylus dist/**/*.styl",
     "build": "npm run build:init && npm run build:styles && npm run build:finish",
     "build:init": "rimraf dist && copyfiles -u 1 ./src/** dist && copyfiles -u 1 ./src/**/** dist",
-    "build:styles": "npm run compile:styles::dist && stylesheet-inliner --input=dist/metal-button/**.js",
+    "build:styles": "npm run compile:styles::dist && stylesheet-inliner --input=dist/**/**.js",
     "build:finish": "del dist/**/**.styl && del dist/**/**.css",
     "prepublish": "npm run build"
   },
