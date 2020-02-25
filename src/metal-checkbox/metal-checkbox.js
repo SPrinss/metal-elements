@@ -60,11 +60,6 @@ export class MetalCheckboxElement extends MetalElement {
     };
   }
 
-  /**
-  * Getter that returns a TemplateResult
-  * @type {object}
-  * @return {templateResult} The template result
-  */
   get template() {
     return html`
       <link rel="stylesheet" href="../src/metal-checkbox/metal-checkbox.css">
