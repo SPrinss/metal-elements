@@ -68,13 +68,7 @@ export class MetalCheckboxElement extends MetalElement {
   get template() {
     return html`
       <link rel="stylesheet" href="../src/metal-checkbox/metal-checkbox.css">
-
-      <section>
-        <metal-button
-          .icon="${this.checked ? 'done' : ''}"
-        ></metal-button>
-      </section>
-      <label>${this.label}</label>
+      <metal-button .icon="${this.checked ? 'done' : ''}"></metal-button>
     `;
   }
 
