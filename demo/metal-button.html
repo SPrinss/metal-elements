@@ -20,22 +20,22 @@
    --metal-button-background--active: var(--metal-color-main--40);
    --metal-button-background--disabled: var(--metal-color-ground--30);
 
-   --metal-button-color: var(--metal-color-typography--30);
-   --metal-button-color--focus: var(--metal-color-typography--40);
-   --metal-button-color--hover: var(--metal-color-typography--40);
-   --metal-button-color--active: var(--metal-color-typography--40);
-   --metal-button-color--disabled: var(--metal-color-typography--10);
+   --metal-button-color: var(--metal-color-typography--90);
+   --metal-button-color--focus: var(--metal-color-typography--90);
+   --metal-button-color--hover: var(--metal-color-typography--90);
+   --metal-button-color--active: var(--metal-color-typography--90);
+   --metal-button-color--disabled: var(--metal-color-typography--70);
 
-   --metal-button-border-width: 4px;
+   --metal-button-border-width: 2px;
   
    --metal-button-transition-time: 0.6sec;
    --metal-button-font-size: var(--metal-font-size--body-4);
   }
 </style>
 <body>
-  <metal-button icon="arrow-right">Press me</metal-button>
-  <metal-button>Press me</metal-button>
-  <metal-button icon="arrow-right"></metal-button>
+  <metal-button>Default</metal-button>
+  <metal-button icon="arrow-right">With icon</metal-button>
+  <metal-button disabled>Disabled</metal-button>
   <metal-button id="custom-styled-button">Custom styling</metal-button>
 </body>
 </html>
