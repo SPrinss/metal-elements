@@ -38,7 +38,7 @@ import { MetalElement, html } from '../metal-element.js';
  * @cssprop --metal-button-font-size
  * 
  */
-export default class MetalButtonElement extends MetalElement {
+export class MetalButtonElement extends MetalElement {
 
   static get properties() {
     return { 
