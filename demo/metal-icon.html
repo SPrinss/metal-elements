@@ -10,19 +10,26 @@
 <link rel="stylesheet" href="/demo/theme-styles/theme-sizings.css">
 
 <style>
-  #custom-styled-icon {
-    --metal-icon-size: var(--metal-size--9);
-    --metal-icon-color: var(--metal-color-highlight--90);
+  .custom {
+    --metal-icon-size: var(--metal-size--6);
+    --metal-icon-color: var(--metal-color-highlight--60);
   }
 </style>
 
 <body>
-  <metal-icon id="demo" icon="arrow-left"></metal-icon>
+
+  <metal-icon icon="arrow-left"></metal-icon>
+  <metal-icon icon="arrow-down"></metal-icon>
+  <metal-icon icon="arrow-right"></metal-icon>
+  <metal-icon icon="close"></metal-icon>
+  <metal-icon icon="add"></metal-icon>
+  <metal-icon icon="logo"></metal-icon>
   <metal-icon icon="heart"></metal-icon>
-  <metal-icon id="custom-styled-icon" icon="close"></metal-icon>
-  
+  <metal-icon icon="done"></metal-icon>
+  <metal-icon icon="pencil" class="custom"></metal-icon>
+
   <script>
-    demo.addEventListener('icon-changed', (e) => {console.log(e.type, e.detail)})
+    document.querySelector('.custom').addEventListener('icon-changed', (e) => {console.log(e.type, e.detail)})
   </script>
 </body>
 </html>
