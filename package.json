@@ -8,7 +8,7 @@
     "start:server::watch": "es-dev-server --app-index demo/index.html --http2 --node-resolve --watch --open",
     "format": "npm run format:javascript",
     "format:javascript": "eslint --ext .js . --fix --ignore-path .gitignore",
-    "docs": "wca analyze src/ --outFile custom-elements.json",
+    "docs": "wca analyze src/ --outFile demo/custom-elements.json",
     "compile": "npm run compile:styles",
     "compile:styles": "npm run compile:styles",
     "compile:styles::watch": "stylus src/**/*.styl -w",
