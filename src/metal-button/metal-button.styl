@@ -22,7 +22,7 @@ button
   width 100%
   height 100%
   margin 0
-  padding 0 var(--metal-size--3)
+  padding 0 var(--metal-size--4)
   cursor pointer
   user-select none
   transition var(--metal-button-transition-time, var(--metal-transition-time)) all ease
@@ -30,6 +30,7 @@ button
 
 button[data-icon]
   border-radius var(--metal-button-border-radius--no-label, 50%)
+  padding 0
 
 button:focus
   background var(--metal-button-background--focus, var(--metal-color-highlight--50))
@@ -69,7 +70,7 @@ span
   overflow hidden
 
 span:not([hidden]) + metal-icon
-  padding-left var(--metal-size--2)
+  padding-left var(--metal-size--4)
 
 metal-icon 
   flex none
