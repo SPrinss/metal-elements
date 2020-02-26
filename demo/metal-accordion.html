@@ -16,11 +16,11 @@
 <body>
   <style>
     #custom-styled-accordion {
-      --metal-accordion-button-background: var(--metal-color-main--50);
+      --metal-accordion-button-background: var(--metal-color-highlight--100);
       --metal-accordion-button-background--hover: var(--metal-color-main--60);
       --metal-accordion-button-background--active: var(--metal-color-main--70);
       --metal-accordion-button-background--open: var(--metal-color-main--70);
-      --metal-accordion-button-color: var(--metal-color-highlight--70);
+      --metal-accordion-button-color: var(--metal-color-light--100);
       --metal-accordion-button-color--open: var(--metal-color-highlight--70);
       --metal-accordion-item-background: var(--metal-color-main--50);
       --metal-accordion-item-margin-bottom: var(--metal-size--3);
@@ -32,10 +32,10 @@
     <article data-accname="But what if a bird becomes a bee?">Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue.</article>
   </metal-accordion>
 
-  <!-- <metal-accordion id="custom-styled-accordion">
+  <metal-accordion id="custom-styled-accordion">
     <article data-accname="A very important question?">Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue.</article>
     <article data-accname="But what if a bird becomes a bee?">Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue.</article>
-  </metal-accordion> -->
+  </metal-accordion>
 
 <script>
     demo.addEventListener('values-changed', (e) => {console.log(e.type, e.detail)})
