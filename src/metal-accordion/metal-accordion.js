@@ -62,16 +62,15 @@ export class MetalAccordionElement extends MetalElement {
     return html`
       <link rel="stylesheet" href="../src/metal-accordion/metal-accordion.css">
       ${this.values.map((val, i) => html`
-        <metal-button
-          .icon="${i === this.selectedIndex ? 'close' : 'add'}"
-          data-index="${i}"
-          @click="${this._handleButtonClick}"
-          ?data-opened="${i === this.selectedIndex}"
-        >${val}</metal-button>
-        <div
-          class="container"
-          ?data-opened="${i === this.selectedIndex}"
-        >${unsafeHTML(this._children[i].outerHTML)}</div>   
+        <div class="container" ?data-opened="${i === this.selectedIndex}">
+          <metal-button
+            .icon="${i === this.selectedIndex ? 'arrow_drop_up' : 'arrow_drop_down'}"
+            data-index="${i}"
+            @click="${this._handleButtonClick}"
+            ?data-opened="${i === this.selectedIndex}"
+          >${val}</metal-button>
+          <div class="item">${unsafeHTML(this._children[i].outerHTML)}</div>
+        </div>   
       `)}
 
       <div id="slotContainer"><slot></slot></div>

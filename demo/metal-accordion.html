@@ -8,6 +8,11 @@
 </head>
 <link rel="stylesheet" href="/demo/theme-styles/theme-colors.css">
 <link rel="stylesheet" href="/demo/theme-styles/theme-sizings.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-borders.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-border-radius.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-transitions.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-box-shadows.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-typography.css">
 <body>
   <style>
     #custom-styled-accordion {
@@ -27,11 +32,12 @@
     <article data-accname="But what if a bird becomes a bee?">Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue.</article>
   </metal-accordion>
 
-  <metal-accordion id="custom-styled-accordion">
+  <!-- <metal-accordion id="custom-styled-accordion">
     <article data-accname="A very important question?">Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue.</article>
     <article data-accname="But what if a bird becomes a bee?">Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue.</article>
-  </metal-accordion>
-  <script>
+  </metal-accordion> -->
+
+<script>
     demo.addEventListener('values-changed', (e) => {console.log(e.type, e.detail)})
     demo.addEventListener('selected-index-changed', (e) => {console.log(e.type, e.detail)})
   </script>
