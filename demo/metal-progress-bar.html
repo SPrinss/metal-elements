@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Metal element progress bar</title>
+  <title>MetalProgressBarElement Demo</title>
   <script type="module" src="../src/metal-progress-bar/metal-progress-bar.js"></script>
 
 </head>
@@ -12,14 +12,16 @@
 <link rel="stylesheet" href="/demo/theme-styles/theme-border-radius.css">
 
 <style>
-  #custom-styled-progress-bar {
-    --metal-progress-bar-height: var(--metal-size--9);
-    --metal-progress-bar-color: var(--metal-color-highlight--90);
+  .custom {
+    --metal-progress-bar-height: var(--metal-size--4);
+    --metal-progress-bar-color: var(--metal-color-main--20);
+    --metal-progress-bar-color--active: var(--metal-color-main--100);
   }
 </style>
 
 <body>
-  <metal-progress-bar max="10" value="5" solid="false"></metal-progress-bar>
-  <metal-progress-bar id="custom-styled-progress-bar" max="5"></metal-progress-bar>
+  <metal-progress-bar max="10" value="5"></metal-progress-bar>
+  <metal-progress-bar max="20" value="7" solid></metal-progress-bar>
+  <metal-progress-bar max="5" value="1" class="custom"></metal-progress-bar>
 </body>
 </html>
