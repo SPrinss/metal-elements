@@ -1,0 +1,31 @@
+:host
+  display inline-block
+  outline none
+  vertical-align middle
+
+metal-button
+  --metal-button-height var(--metal-radio-size, var(--metal-size--7))
+  --metal-button-border-radius var(--metal-radio-border-radius, 50%)
+
+  --metal-button-background var(--metal-radio-background, var(--metal-color-light--100))
+  --metal-button-color var(--metal-radio-color, var(--metal-color-dark--80))
+  --metal-button-border-color var(--metal-radio-border-color, var(--metal-color-dark--80))
+  --metal-button-border-width var(--metal-radio-border-width, var(--metal-border--2))
+
+  --metal-button-background--hover var(--metal-radio-background--hover, var(--metal-color-dark--10))
+  --metal-button-color--hover var(--metal-radio-color--hover, var(--metal-color-dark--80))
+  --metal-button-border-color--hover var(--metal-radio-border-color--hover, var(--metal-color-dark--80))
+  --metal-button-border-width--hover var(--metal-radio-border-width--hover, var(--metal-border--2))
+
+  --metal-button-background--active var(--metal-radio-background--active, var(--metal-color-dark--20))
+  --metal-button-color--active var(--metal-radio-color--active, var(--metal-color-dark--80))
+  --metal-button-border-color--active var(--metal-radio-border-color--active, var(--metal-color-dark--80))
+  --metal-button-border-width--active var(--metal-radio-border-width--active, var(--metal-border--2))
+
+  --metal-button-background--disabled var(--metal-radio-background--disabled, var(--metal-color-dark--20))
+  --metal-button-color--disabled var(--metal-radio-color--disabled, var(--metal-color-light--100))
+  --metal-button-border-color--disabled transparent
+
+  &[disabled]
+    pointer-events none
+    cursor none

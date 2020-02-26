@@ -2,26 +2,26 @@ import { MetalElement, html } from '../metal-element.js';
 import '../metal-button/metal-button.js';
 
 /**
- * Metal Elements Checkbox
- * @element metal-checkbox
+ * Metal Elements Radio
+ * @element metal-radio
  * 
- * @cssprop --metal-checkbox-background
- * @cssprop --metal-checkbox-background--active
- * @cssprop --metal-checkbox-background--focus
- * @cssprop --metal-checkbox-background--hover
- * @cssprop --metal-checkbox-background--disabled
- * @cssprop --metal-checkbox-color
- * @cssprop --metal-checkbox-color--active
- * @cssprop --metal-checkbox-color--focus
- * @cssprop --metal-checkbox-color--hover
- * @cssprop --metal-checkbox-color--disabled
- * @cssprop --metal-checkbox-border-radius
- * @cssprop --metal-checkbox-border-color
- * @cssprop --metal-checkbox-border-width
- * @cssprop --metal-checkbox-label-padding
+ * @cssprop --metal-radio-background
+ * @cssprop --metal-radio-background--active
+ * @cssprop --metal-radio-background--focus
+ * @cssprop --metal-radio-background--hover
+ * @cssprop --metal-radio-background--disabled
+ * @cssprop --metal-radio-color
+ * @cssprop --metal-radio-color--active
+ * @cssprop --metal-radio-color--focus
+ * @cssprop --metal-radio-color--hover
+ * @cssprop --metal-radio-color--disabled
+ * @cssprop --metal-radio-border-radius
+ * @cssprop --metal-radio-border-color
+ * @cssprop --metal-radio-border-width
+ * @cssprop --metal-radio-label-padding
  * 
  */
-export class MetalCheckboxElement extends MetalElement {
+export class MetalRadioElement extends MetalElement {
 
   static get properties() {
     return {
@@ -38,7 +38,7 @@ export class MetalCheckboxElement extends MetalElement {
         changedHandler: '_disabledChanged'
       },
       /**
-       * Whether the checkbox is checked or not
+       * Whether the radio is checked or not
        * @type {boolean} 
        * @attr checked
        * @default false
@@ -50,7 +50,7 @@ export class MetalCheckboxElement extends MetalElement {
         changedEventName: 'checked-changed'
       },
       /**
-       * The label that's displayed next to the checkbox
+       * The label that's displayed next to the radio
        * @type {string} 
        * @attr label
        * @default ''
@@ -65,24 +65,24 @@ export class MetalCheckboxElement extends MetalElement {
   static get ensuredAttributes() {
     return {
       tabIndex: 0,
-      role: 'checkbox'
+      role: 'radio'
     };
   }
 
   get template() {
     return html`
-      <link rel="stylesheet" href="../src/metal-checkbox/metal-checkbox.css">
+      <link rel="stylesheet" href="../src/metal-radio/metal-radio.css">
       <metal-button
-        .icon="${this.checked ? 'done' : ''}"
+        .icon="${this.checked ? 'fiber_manual_record' : ''}"
         .disabled="${this.disabled}"
-        @click="${this.toggle}"
+        @click="${this.enable}"
       ></metal-button>
     `;
   }
 
-  toggle() {
+  enable() {
     if(this.disabled) return;
-    this.checked = !this.checked;
+    this.checked = true;
   }
 
   _disabledChanged(disabled) {
@@ -98,4 +98,4 @@ export class MetalCheckboxElement extends MetalElement {
 
 }
 
-window.customElements.define('metal-checkbox', MetalCheckboxElement);
+window.customElements.define('metal-radio', MetalRadioElement);
