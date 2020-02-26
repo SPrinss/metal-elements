@@ -71,9 +71,14 @@ export class MetalButtonElement extends MetalElement {
        */
       value: {
         set: String,
+        defaultValue: ''
       }
 
     };
+  }
+
+  static get ensuredAttributes() {
+    return { tabindex: 0, role: 'button' }
   }
    
   connectedCallback() {
@@ -84,10 +89,10 @@ export class MetalButtonElement extends MetalElement {
   get template() {
     return html`
       <link rel="stylesheet" href="../src/metal-button/metal-button.css">
-      <button ?data-icon="${!this._hasLabel}" ?disabled="${this.disabled}" .value="${this.value}" tabindex="0">
+      <div id="button" ?data-icon="${!this._hasLabel}" ?disabled="${this.disabled}">
         <span ?hidden="${!this._hasLabel}"><slot></slot></span>
         ${this.icon ? html`<metal-icon icon="${this.icon}"></metal-icon>` : html`` }
-      </button>
+      </div>
     `;
   }
 
@@ -101,11 +106,12 @@ export class MetalButtonElement extends MetalElement {
 
   _disabledChanged(disabled) {
     if(disabled) {
-      this.removeAttribute('tabindex');
+      this._tabIndex = this.getAttribute('tabindex') || this.constructor.ensuredAttributes.tabIndex || 0;
+      this.setAttribute('tabindex', -1);
       this.setAttribute('aria-disabled', 'true');
     } else {
-      if(!this.hasAttribute('role')) this.setAttribute('role', 'button');
       this.removeAttribute('aria-disabled');
+      if(this._tabIndex) this.setAttribute('tabindex', this._tabIndex || this.constructor.ensuredAttributes.tabIndex);
     }
   }
 

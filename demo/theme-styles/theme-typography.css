@@ -1,22 +1,81 @@
 html, body {
-  --metal-font-family: 'Karla', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe  =I Symbol";
-
-  --metal-font-weight-base: 200;
-  --metal-font-weight--1: calc( var(--metal-font-weight-base) * 1);
-  --metal-font-weight--2: calc( var(--metal-font-weight-base) * 2);
-  --metal-font-weight--3: calc( var(--metal-font-weight-base) * 3);
-  --metal-font-weight--4: calc( var(--metal-font-weight-base) * 4);
-
-  --metal-font-size--body-1: 0.5rem;
-  --metal-font-size--body-2: 0.8rem;
-  --metal-font-size--body-3: 1rem;
-  --metal-font-size--body-4: 1.15rem;
-  --metal-font-size--body-5: 1.4rem;
-
-  --metal-font-size--header-1: 1.9rem;
-  --metal-font-size--header-2: 2.3rem;
-  --metal-font-size--header-3: 3rem;
-  --metal-font-size--header-4: 4rem;
-  --metal-font-size--header-5: 5rem;
   
+  --metal-typo-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe  =I Symbol';
+  
+
+  /* Headings */
+  
+  --metal-typo-h-font-family: var(--metal-typo-font-family);
+
+  --metal-typo-h1-font-size: 6.00rem;
+  --metal-typo-h1-font-family: var(--metal-typo-h-font-family);
+  --metal-typo-h1-font-weight: 500;
+  --metal-typo-h1-line-height: 90%;
+
+  --metal-typo-h2-font-size: 4.50rem;
+  --metal-typo-h2-font-family: var(--metal-typo-h-font-family);
+  --metal-typo-h2-font-weight: 500;
+  --metal-typo-h2-line-height: 90%;
+  
+  --metal-typo-h3-font-size: 3.00rem;
+  --metal-typo-h3-font-family: var(--metal-typo-h-font-family);
+  --metal-typo-h3-font-weight: 500;
+  --metal-typo-h3-line-height: 100%;
+  
+  --metal-typo-h4-font-size: 2.25rem;
+  --metal-typo-h4-font-family: var(--metal-typo-h-font-family);
+  --metal-typo-h4-font-weight: 500;
+  --metal-typo-h4-line-height: 100%;
+  
+  --metal-typo-h5-font-size: 1.50rem;
+  --metal-typo-h5-font-family: var(--metal-typo-h-font-family);
+  --metal-typo-h5-font-weight: 600;
+  --metal-typo-h5-line-height: 100%;
+  
+  --metal-typo-h6-font-size: 1.25rem;
+  --metal-typo-h6-font-family: var(--metal-typo-h-font-family);
+  --metal-typo-h6-font-weight: 600;
+  --metal-typo-h6-line-height: 100%;
+
+
+  /* Body Text */
+
+  --metal-typo-b-font-family: var(--metal-typo-font-family);
+  --metal-typo-b-font-weight: 400;
+  --metal-typo-b-line-height: 140%;
+
+  --metal-typo-b1-font-size: 1.25rem;
+  --metal-typo-b1-font-family: var(--metal-typo-b-font-family);
+  --metal-typo-b1-font-weight: var(--metal-typo-b-font-weight);
+  --metal-typo-b1-line-height: var(--metal-typo-b-line-height);
+
+  --metal-typo-b2-font-size: 1.12rem;
+  --metal-typo-b2-font-family: var(--metal-typo-b-font-family);
+  --metal-typo-b2-font-weight: var(--metal-typo-b-font-weight);
+  --metal-typo-b2-line-height: var(--metal-typo-b-line-height);
+
+  --metal-typo-b3-font-size: 1.00rem;
+  --metal-typo-b3-font-family: var(--metal-typo-b-font-family);
+  --metal-typo-b3-font-weight: var(--metal-typo-b-font-weight);
+  --metal-typo-b3-line-height: var(--metal-typo-b-line-height);
+
+
+  /* Caption / Small Text */
+
+  --metal-typo-c-font-family: var(--metal-typo-font-family);
+  --metal-typo-c-font-weight: 400;
+  --metal-typo-c-line-height: 125%;
+
+  --metal-typo-c1-font-size: 0.88rem;
+  --metal-typo-c1-font-family: var(--metal-typo-c-font-family);
+  --metal-typo-c1-font-weight: var(--metal-typo-c-font-weight);
+
+  --metal-typo-c2-font-size: 0.75rem;
+  --metal-typo-c2-font-family: var(--metal-typo-c-font-family);
+  --metal-typo-c2-font-weight: var(--metal-typo-c-font-weight);
+
+  --metal-typo-c3-font-size: 0.63rem;
+  --metal-typo-c3-font-family: var(--metal-typo-c-font-family);
+  --metal-typo-c3-font-weight: var(--metal-typo-c-font-weight);
+
 }

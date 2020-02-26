@@ -1,7 +1,7 @@
-import { Property } from 'html-element-mixins';
+import { Property, EnsuredAttributes } from 'html-element-mixins';
 import { html } from 'lit-html';
 
-class MetalElement extends Property(HTMLElement) {
+class MetalElement extends EnsuredAttributes(Property(HTMLElement)) {
   static get properties() {
     return {};
   }
