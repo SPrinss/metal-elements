@@ -9,25 +9,29 @@
 </head>
 <link rel="stylesheet" href="/demo/theme-styles/theme-colors.css">
 <link rel="stylesheet" href="/demo/theme-styles/theme-sizings.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-borders.css">
 <link rel="stylesheet" href="/demo/theme-styles/theme-border-radius.css">
 <link rel="stylesheet" href="/demo/theme-styles/theme-transitions.css">
 <link rel="stylesheet" href="/demo/theme-styles/theme-box-shadows.css">
 <link rel="stylesheet" href="/demo/theme-styles/theme-typography.css">
 <style>
   .custom {
-    --metal-checkbox-background: var(--metal-color-highlight--80);
-    --metal-checkbox-color: var(--metal-color-typography--30);
-    --metal-checkbox-border-radius: 0%;
-    --metal-checkbox-border-color: wheat;
-    --metal-checkbox-border-width: 3px;
-    --metal-checkbox-label-padding: 12px;
+    --metal-checkbox-background: var(--metal-color-highlight--100);
+    --metal-checkbox-color: var(--metal-color-light--100);
+    --metal-checkbox-border-color: var(--metal-color-dark--100);
   }
 </style>
 <body>
-  <main>
-    <metal-checkbox checked></metal-checkbox>
-    <metal-checkbox class="custom"></metal-checkbox>
-  </main>
-</body>
+  <metal-checkbox></metal-checkbox>
+  <metal-checkbox checked></metal-checkbox>
+  <metal-checkbox checked disabled></metal-checkbox>
+  <metal-checkbox class="custom"></metal-checkbox>
 
+  <script>
+    document.querySelector('metal-checkbox').addEventListener('checked-changed', (e) => {
+      console.info('checked changed!', e.detail)
+    })
+</script>
+
+</body>
 </html>

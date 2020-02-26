@@ -19,7 +19,7 @@
   border-color var(--metal-button-border-color, var(--metal-color-main--100))
   box-shadow: var(--metal-button-box-shadow, var(--metal-box-shadow--0))
 
-  border-width var(--metal-button-border-width, 2px)
+  border-width var(--metal-button-border-width, var(--metal-border--2))
   border-style var(--metal-button-border-style, solid)
   border-radius var(--metal-button-border-radius, var(--metal-border-radius--1))
 
@@ -42,7 +42,7 @@
 
 #button[data-icon]
   min-width var(--metal-button-height, var(--metal-size--9))
-  border-radius var(--metal-button-border-radius--no-label, 50%)
+  border-radius var(--metal-button-border-radius, 50%)
   padding 0
 
 :host(:focus) #button

@@ -50,10 +50,11 @@ class MetalElement extends EnsuredAttributes(Property(HTMLElement)) {
   __handleKeydown(e) {
     for(var methodName in this.constructor.keyBindings) {
       const requirements = this.constructor.keyBindings[methodName];
+      let requirementsMet = 0;
       for(var requirement in requirements) {
-        if(e[requirement] !== requirements[requirement]) continue;
+        if(e[requirement] === requirements[requirement]) requirementsMet++;
       }
-      this[methodName].call(this, e);
+      if(requirementsMet === Object.keys(requirements).length) this[methodName].call(this, e);
     }
   }
 

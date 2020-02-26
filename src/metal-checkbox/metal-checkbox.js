@@ -26,6 +26,18 @@ export class MetalCheckboxElement extends MetalElement {
   static get properties() {
     return {
       /**
+       * Whether the user can interact with the button
+       * @type {boolean} 
+       * @attr disabled
+       * @default false
+       */
+      disabled: {
+        set: Boolean,
+        attribute: 'disabled',
+        defaultValue: false,
+        changedHandler: '_disabledChanged'
+      },
+      /**
        * Whether the checkbox is checked or not
        * @type {boolean} 
        * @attr checked
@@ -34,7 +46,8 @@ export class MetalCheckboxElement extends MetalElement {
       checked: {
         set: Boolean,
         defaultValue: false,
-        attribute: 'checked'
+        attribute: 'checked',
+        changedEventName: 'checked-changed'
       },
       /**
        * The label that's displayed next to the checkbox
@@ -49,26 +62,34 @@ export class MetalCheckboxElement extends MetalElement {
     };
   }
 
-  constructor() {
-    super();
-    this.addEventListener('click', this._handleClick.bind(this));
-  }
-
   static get ensuredAttributes() {
     return {
-      tabIndex: 0
+      tabIndex: 0,
+      role: 'checkbox'
     };
   }
 
   get template() {
     return html`
       <link rel="stylesheet" href="../src/metal-checkbox/metal-checkbox.css">
-      <metal-button .icon="${this.checked ? 'done' : ''}"></metal-button>
+      <metal-button .icon="${this.checked ? 'done' : ''}" @click="${this.toggle}" .disabled="${this.disabled}"></metal-button>
     `;
   }
 
-  _handleClick() {
+  toggle() {
+    if(this.disabled) return;
     this.checked = !this.checked;
+  }
+
+  _disabledChanged(disabled) {
+    if(disabled) {
+      this._tabIndex = this.getAttribute('tabindex') || this.constructor.ensuredAttributes.tabIndex || 0;
+      this.setAttribute('tabindex', -1);
+      this.setAttribute('aria-disabled', 'true');
+    } else {
+      this.removeAttribute('aria-disabled');
+      if(this._tabIndex) this.setAttribute('tabindex', this._tabIndex || this.constructor.ensuredAttributes.tabIndex);
+    }
   }
 
 }
