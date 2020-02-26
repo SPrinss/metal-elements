@@ -23,6 +23,21 @@ import { MetalElement, html } from '../metal-element.js';
     };
   }
 
+  constructor() {
+    super();
+    this.loadFonts();
+  }
+
+  async loadFonts() {
+    if(document.querySelector('.metal-material-fonts')) return;
+    const style = document.createElement('style');
+    style.classList.add('metal-material-fonts');
+    document.head.appendChild(style);
+    const res = await fetch('https://fonts.googleapis.com/icon?family=Material+Icons');
+    const txt = await res.text();
+    style.innerHTML = txt;
+  }
+
   get template() {
     return html`
       <link rel="stylesheet" href="../src/metal-icon/metal-icon.css">
