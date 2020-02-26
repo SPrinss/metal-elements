@@ -9,14 +9,16 @@
   display flex
   padding 0 3px
   margin 3px 0
-  height var(--metal-progress-bar-height, var(--metal-size--2))
+  height var(--metal-progress-bar-height, var(--metal-size--1))
 
 span
   flex 1
-  margin 0 3px
   border-radius var(--metal-progress-bar-border-radius, var(--metal-border-radius--1))
   overflow hidden
   position relative
+
+  &:not(:last-child)
+    margin-right 6px
 
 :host([solid]) span 
   margin 0
@@ -30,13 +32,8 @@ span:before, span:after
   content ''
   position absolute
 
-span:before
-  opacity 0.35
-
 span:after
-  background var(--metal-progress-bar-color, var(--metal-color-main--50))
-  opacity 0.1
-  transition: 0.5s opacity ease-in-out
+  background var(--metal-progress-bar-color, var(--metal-color-highlight--10))
 
 span[data-active]:after
-  opacity 1
+  background var(--metal-progress-bar-color--active, var(--metal-color-highlight--100))

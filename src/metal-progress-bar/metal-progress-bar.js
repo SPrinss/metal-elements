@@ -44,7 +44,7 @@ export class MetalProgressBarElement extends MetalElement {
       solid: {
         set: Boolean,
         attribute: 'solid',
-        defaultValue: true
+        defaultValue: false
       }
     };
   }
