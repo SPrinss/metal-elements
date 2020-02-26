@@ -89,11 +89,6 @@ export class MetalTextInputElement extends MetalElement {
     `;
   }
 
-  /**
-  * Getter that returns the validity of the input element
-  * @type {object}
-  * @return {boolean} invalid | valid
-  */
   get getInvalid() {
     const $input = this.shadowRoot.querySelector('input');
     return $input && !$input.checkValidity();
