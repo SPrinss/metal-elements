@@ -9,6 +9,7 @@ class MetalElement extends EnsuredAttributes(Property(HTMLElement)) {
   constructor() {
     super();
     this.constructor.__setDefaultPropertyValues.call(this);
+    this.addEventListener('keydown', this.__handleKeydown.bind(this));
     this.attachShadow({mode: 'open'});
   }
   
@@ -44,6 +45,20 @@ class MetalElement extends EnsuredAttributes(Property(HTMLElement)) {
 
   __shadowRender() {
     import('lit-html/lib/render.js').then(module => module.render(this.template, this.shadowRoot, {eventContext: this}));
+  }
+
+  __handleKeydown(e) {
+    for(var methodName in this.constructor.keyBindings) {
+      const requirements = this.constructor.keyBindings[methodName];
+      for(var requirement in requirements) {
+        if(e[requirement] !== requirements[requirement]) continue;
+      }
+      this[methodName].call(this, e);
+    }
+  }
+
+  static get keyBindings() {
+    return {}
   }
 
 }

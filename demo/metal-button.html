@@ -28,5 +28,12 @@
   <metal-button icon="android"></metal-button>
   <metal-button disabled icon="android">Disabled</metal-button>
   <metal-button class="action">Custom styling</metal-button>
+
+  <script>
+    document.querySelector('metal-button').addEventListener('click', (e) => {
+      console.info('click!', e)
+    })
+  </script>
+  
 </body>
 </html>

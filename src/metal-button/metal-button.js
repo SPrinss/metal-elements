@@ -80,6 +80,12 @@ export class MetalButtonElement extends MetalElement {
   static get ensuredAttributes() {
     return { tabindex: 0, role: 'button' }
   }
+
+  static get keyBindings() {
+    return {
+      'click': {key: 'Enter'}
+    }
+  }
    
   connectedCallback() {
     super.connectedCallback();
