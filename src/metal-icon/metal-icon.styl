@@ -1,12 +1,28 @@
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons'
+
 :host 
+  display inline
+  font-family 'Material Icons', sans-serif
+  font-weight normal
+  font-style normal
   display inline-block
-  height var(--metal-icon-size, var(--metal-size--5))
-  width var(--metal-icon-size, var(--metal-size--5))
+  text-transform none
+  letter-spacing normal
+  word-wrap normal
+  white-space nowrap
+  direction ltr
+  color inherit
+  font-size inherit
+  line-height inherit
+  vertical-align middle
 
-svg 
-  height 100%
-  width 100%
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing antialiased
+  /* Support for Safari and Chrome. */
+  text-rendering optimizeLegibility
 
-g 
-  stroke var(--metal-icon-color, var(--metal-color-typography--50))
-  fill none
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing grayscale
+
+  /* Support for IE. */
+  font-feature-settings 'liga'

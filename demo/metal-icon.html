@@ -10,26 +10,28 @@
 <link rel="stylesheet" href="/demo/theme-styles/theme-sizings.css">
 
 <style>
+  body {
+    font-size: 24px;
+    color: red;
+  }
+
   .custom {
-    --metal-icon-size: var(--metal-size--6);
-    --metal-icon-color: var(--metal-color-highlight--60);
+    color: blue;
+    font-size: 44px;
   }
 </style>
 
 <body>
 
-  <metal-icon icon="arrow-left"></metal-icon>
-  <metal-icon icon="arrow-down"></metal-icon>
-  <metal-icon icon="arrow-right"></metal-icon>
-  <metal-icon icon="close"></metal-icon>
-  <metal-icon icon="add"></metal-icon>
-  <metal-icon icon="logo"></metal-icon>
-  <metal-icon icon="heart"></metal-icon>
-  <metal-icon icon="done"></metal-icon>
-  <metal-icon icon="pencil" class="custom"></metal-icon>
+  <metal-icon icon="compare_arrows"></metal-icon>
+  <metal-icon icon="3d_rotation"></metal-icon>
+  <metal-icon icon="accessibility"></metal-icon>
+  <metal-icon icon="accessibility_new"></metal-icon>
+  <metal-icon icon="accessible"></metal-icon>
+  <metal-icon icon="accessible_forward"></metal-icon>
+  <metal-icon icon="account_balance"></metal-icon>
+  <metal-icon icon="account_balance_wallet"></metal-icon>
+  <metal-icon icon="account_box" class="custom"></metal-icon>
 
-  <script>
-    document.querySelector('.custom').addEventListener('icon-changed', (e) => {console.log(e.type, e.detail)})
-  </script>
 </body>
 </html>
