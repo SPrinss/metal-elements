@@ -5,8 +5,9 @@ import { MetalElement, html } from '../metal-element.js';
  * @element metal-progress-bar
  * 
  * @cssprop --metal-progress-bar-height
- * @cssprop --metal-progress-bar-color
  * @cssprop --metal-progress-bar-border-radius
+ * @cssprop --metal-progress-bar-color
+ * @cssprop --metal-progress-bar-color--active
  * 
  */
 export class MetalProgressBarElement extends MetalElement {

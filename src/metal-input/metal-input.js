@@ -6,11 +6,39 @@ import { MetalElement, html } from '../metal-element.js';
  * 
  * @fires value-changed - Current input value, empty if input's value is invalid.
  *
+ * @cssprop --metal-input-height
+ * @cssprop --metal-input-font-family
+ * @cssprop --metal-input-font-size
+ * @cssprop --metal-input-font-weight
+ * @cssprop --metal-input-background
+ * @cssprop --metal-input-color
+ * @cssprop --metal-input-box-shadow
+ * @cssprop --metal-input-border-width
+ * @cssprop --metal-input-border-style
  * @cssprop --metal-input-border-color
+ * @cssprop --metal-input-border-radius
+ * @cssprop --metal-input-padding
+ * @cssprop --metal-input-transition-duration
+ * @cssprop --metal-input-transition-timing-function
+ * @cssprop --metal-input-border-width--focus
+ * @cssprop --metal-input-border-style--focus
  * @cssprop --metal-input-border-color--focus
- * @cssprop --metal-input-border-color--not-empty
+ * @cssprop --metal-input-border-radius--focus
+ * @cssprop --metal-input-box-shadow--focus
+ * @cssprop --metal-input-background--disabled
+ * @cssprop --metal-input-color--disabled
+ * @cssprop --metal-input-border-color--disabled
+ * @cssprop --metal-input-box-shadow-disabled
+ * @cssprop --metal-input-placeholder-color
+ * @cssprop --metal-input-placeholder-font-family
+ * @cssprop --metal-input-placeholder-font-size
+ * @cssprop --metal-input-placeholder-font-weight
+ * @cssprop --metal-input-padding
+ * @cssprop --metal-input-label-transition-duration
+ * @cssprop --metal-input-label-transition-timing-function
+ * @cssprop --metal-input-placeholder-color--enabled
  * @cssprop --metal-input-border-color--invalid
- * @cssprop --metal-input-label-color
+ * @cssprop --metal-input-placeholder-color--invalid
  */
 export class MetalInputElement extends MetalElement {
 

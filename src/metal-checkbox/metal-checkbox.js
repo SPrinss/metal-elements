@@ -5,20 +5,22 @@ import '../metal-button/metal-button.js';
  * Metal Elements Checkbox
  * @element metal-checkbox
  * 
- * @cssprop --metal-checkbox-background
- * @cssprop --metal-checkbox-background--active
- * @cssprop --metal-checkbox-background--focus
- * @cssprop --metal-checkbox-background--hover
- * @cssprop --metal-checkbox-background--disabled
- * @cssprop --metal-checkbox-color
- * @cssprop --metal-checkbox-color--active
- * @cssprop --metal-checkbox-color--focus
- * @cssprop --metal-checkbox-color--hover
- * @cssprop --metal-checkbox-color--disabled
+ * @cssprop --metal-checkbox-size
  * @cssprop --metal-checkbox-border-radius
+ * @cssprop --metal-checkbox-background
+ * @cssprop --metal-checkbox-color
  * @cssprop --metal-checkbox-border-color
  * @cssprop --metal-checkbox-border-width
- * @cssprop --metal-checkbox-label-padding
+ * @cssprop --metal-checkbox-background--hover
+ * @cssprop --metal-checkbox-color--hover
+ * @cssprop --metal-checkbox-border-color--hover
+ * @cssprop --metal-checkbox-border-width--hover
+ * @cssprop --metal-checkbox-background--active
+ * @cssprop --metal-checkbox-color--active
+ * @cssprop --metal-checkbox-border-color--active
+ * @cssprop --metal-checkbox-border-width--active
+ * @cssprop --metal-checkbox-background--disabled
+ * @cssprop --metal-checkbox-color--disabled
  * 
  */
 export class MetalCheckboxElement extends MetalElement {

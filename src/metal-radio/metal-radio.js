@@ -5,20 +5,22 @@ import '../metal-button/metal-button.js';
  * Metal Elements Radio
  * @element metal-radio
  * 
- * @cssprop --metal-radio-background
- * @cssprop --metal-radio-background--active
- * @cssprop --metal-radio-background--focus
- * @cssprop --metal-radio-background--hover
- * @cssprop --metal-radio-background--disabled
- * @cssprop --metal-radio-color
- * @cssprop --metal-radio-color--active
- * @cssprop --metal-radio-color--focus
- * @cssprop --metal-radio-color--hover
- * @cssprop --metal-radio-color--disabled
+ * @cssprop --metal-radio-size
  * @cssprop --metal-radio-border-radius
+ * @cssprop --metal-radio-background
+ * @cssprop --metal-radio-color
  * @cssprop --metal-radio-border-color
  * @cssprop --metal-radio-border-width
- * @cssprop --metal-radio-label-padding
+ * @cssprop --metal-radio-background--hover
+ * @cssprop --metal-radio-color--hover
+ * @cssprop --metal-radio-border-color--hover
+ * @cssprop --metal-radio-border-width--hover
+ * @cssprop --metal-radio-background--active
+ * @cssprop --metal-radio-color--active
+ * @cssprop --metal-radio-border-color--active
+ * @cssprop --metal-radio-border-width--active
+ * @cssprop --metal-radio-background--disabled
+ * @cssprop --metal-radio-color--disabled
  * 
  */
 export class MetalRadioElement extends MetalElement {
