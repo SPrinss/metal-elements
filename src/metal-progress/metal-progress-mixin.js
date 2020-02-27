@@ -1,6 +1,6 @@
 import { html, MetalElementMixin } from '../metal-element-mixin.js';
 
-const MetalProgressBarMixin = (SuperClass) => class extends MetalElementMixin(SuperClass) {
+const MetalProgressMixin = (SuperClass) => class extends MetalElementMixin(SuperClass) {
   
   static get properties() {
     return {
@@ -57,4 +57,4 @@ const MetalProgressBarMixin = (SuperClass) => class extends MetalElementMixin(Su
 };
 
 
-export { MetalProgressBarMixin, html };
+export { MetalProgressMixin, html };

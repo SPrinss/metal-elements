@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetalProgressElement Demo</title>
+  <script type="module" src="../src/metal-progress/metal-progress.js"></script>
+
+</head>
+<link rel="stylesheet" href="/demo/theme-styles/theme-colors.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-sizings.css">
+<link rel="stylesheet" href="/demo/theme-styles/theme-border-radius.css">
+
+<style>
+  .custom {
+    --metal-progress-height: var(--metal-size--4);
+    --metal-progress-color: var(--metal-color-main--20);
+    --metal-progress-color--active: var(--metal-color-main--100);
+  }
+</style>
+
+<body>
+  <metal-progress max="10" value="5"></metal-progress>
+  <metal-progress max="20" value="7" solid></metal-progress>
+  <metal-progress max="5" value="1" class="custom"></metal-progress>
+</body>
+</html>
