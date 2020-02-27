@@ -35,16 +35,25 @@ const MetalProgressMixin = (SuperClass) => class extends MetalElementMixin(Super
       solid: {
         set: Boolean,
         attribute: 'solid',
-        defaultValue: false
+        defaultValue: true
       }
     };
   }
 
   get metalTemplate() {
     return html`
-      ${this._maxArray.map((item,i) => html`
-        <progress min="0" max="1" value="${(this.value > i) ? 1 : 0}"></progress>
-      `)}
+      ${this.solid ?
+          html`
+            <progress
+              .min="${1}"
+              max="${this.max}"
+              value="${this.value}"></progress>` :
+          html`
+          ${this._maxArray.map((item,i) => html`
+            <progress min="0" max="1" value="${(this.value > i) ? 1 : 0}"></progress>
+          `)}
+          `
+      }
     `;
   }
 

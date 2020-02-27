@@ -40,7 +40,7 @@ progress
   &::-moz-progress-bar
     progress-value()
 
-  &[value="1"]
+  &:not([value="0"])
     &::-webkit-progress-value
       transform scale(1, 1)
 
