@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MetalTextInputElement Demo</title>
-  <script type="module" src="/src/metal-text-input/metal-text-input.js"></script>
+  <title>MetalInputElement Demo</title>
+  <script type="module" src="/src/metal-input/metal-input.js"></script>
 </head>
 <link rel="stylesheet" href="/demo/theme-styles/theme-colors.css">
 <link rel="stylesheet" href="/demo/theme-styles/theme-sizings.css">
@@ -16,19 +16,20 @@
 
 <body>
   <style>
-    metal-text-input {
-      margin: 24px;
+    metal-input {
+      margin: 24px 0;
     }
-    #custom-styled-text-input {
-      --metal-text-input-border-color: green;
-      --metal-text-input-border-color--focus: blue;
-      --metal-text-input-border-color--not-empty: yellow;
-      --metal-text-input-border-color--invalid: red;
-      --metal-text-input-label-color: purple;
+    .custom {
+      --metal-input-border-color: green;
+      --metal-input-border-color--focus: blue;
+      --metal-input-border-color--not-empty: yellow;
+      --metal-input-border-color--invalid: red;
+      --metal-input-placeholder-color: purple;
     }
   </style>
-  <metal-text-input id="demo" type="email"></metal-text-input>
-  <metal-text-input id="custom-styled-text-input" name="Fill in something"></metal-text-input>
+  <metal-input id="demo" type="email" required placeholder="your email"></metal-input>
+  <metal-input id="demo" type="email" required placeholder="your email" disabled></metal-input>
+  <metal-input class="custom" placeholder="Fill in something"></metal-input>
 </body>
 <script>
   demo.addEventListener('value-changed', (e) => {console.log(e.type, e.detail, e.target.invalid)})
