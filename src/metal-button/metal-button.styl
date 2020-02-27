@@ -1,5 +1,5 @@
 @import '../metal-styles/reset'
-@import '../metal-styles/typo/reset/mixin'
+@import '../metal-styles/text-styles'
 
 :host
   display inline-block
@@ -8,11 +8,11 @@
   outline none
 
 #button
-  metal-typo-reset()
-  font-family var(--metal-button-font-family, var(--metal-typo-h6-font-family))
-  font-size var(--metal-button-font-size, var(--metal-typo-h6-font-size))
-  font-weight var(--metal-button-font-weight, var(--metal-typo-h6-font-weight))
-  line-height var(--metal-button-line-height, var(--metal-typo-h6-line-height))
+  metal-text-reset()
+  font-family var(--metal-button-font-family, var(--metal-text-h6-font-family))
+  font-size var(--metal-button-font-size, var(--metal-text-h6-font-size))
+  font-weight var(--metal-button-font-weight, var(--metal-text-h6-font-weight))
+  line-height var(--metal-button-line-height, var(--metal-text-h6-line-height))
 
   background var(--metal-button-background, var(--metal-color-main--100))
   color var(--metal-button-color, var(--metal-color-light--100))
