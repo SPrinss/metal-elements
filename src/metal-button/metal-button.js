@@ -5,37 +5,35 @@ import { MetalElement, html } from '../metal-element.js';
  * @element metal-button
  * @slot
  *
- * @cssprop --metal-button-background
- * @cssprop --metal-button-background--focus
- * @cssprop --metal-button-background--hover
- * @cssprop --metal-button-background--active
- * @cssprop --metal-button-background--disabled
- 
- * @cssprop --metal-button-color
- * @cssprop --metal-button-color--focus
- * @cssprop --metal-button-color--hover
- * @cssprop --metal-button-color--active
- * @cssprop --metal-button-color--disabled
- *
- * @cssprop --metal-button-border-width
- *
- * @cssprop --metal-button-border-color
- * @cssprop --metal-button-border-color--focus
- * @cssprop --metal-button-border-color--hover
- * @cssprop --metal-button-border-color--active
- * @cssprop --metal-button-border-color--disabled
- *
- * @cssprop --metal-button-box-shadow
- * @cssprop --metal-button-box-shadow--focus
- * @cssprop --metal-button-box-shadow--hover
- * @cssprop --metal-button-box-shadow--active
- * @cssprop --metal-button-box-shadow--disabled
- *
- * @cssprop --metal-button-border-radius
- * @cssprop --metal-button-border-radius--no-label
- * @cssprop --metal-button-transition-time
- * @cssprop --metal-button-text-align
+ * @cssprop --metal-button-height
+ * @cssprop --metal-button-font-family
  * @cssprop --metal-button-font-size
+ * @cssprop --metal-button-font-weight
+ * @cssprop --metal-button-line-height
+ * @cssprop --metal-button-background
+ * @cssprop --metal-button-color
+ * @cssprop --metal-button-border-color
+ * @cssprop --metal-button-box-shadow
+ * @cssprop --metal-button-border-width
+ * @cssprop --metal-button-border-style
+ * @cssprop --metal-button-border-radius
+ * @cssprop --metal-button-text-align
+ * @cssprop --metal-button-padding
+ * @cssprop --metal-button-transition-duration
+ * @cssprop --metal-button-transition-timing-function
+ * @cssprop --metal-button-height
+ * @cssprop --metal-button-border-radius
+ * @cssprop --metal-button-box-shadow--focus
+ * @cssprop --metal-button-background--hover
+ * @cssprop --metal-button-color--hover
+ * @cssprop --metal-button-border-color--hover
+ * @cssprop --metal-button-background--active
+ * @cssprop --metal-button-color--active
+ * @cssprop --metal-button-border-color--active
+ * @cssprop --metal-button-background--disabled
+ * @cssprop --metal-button-color--disabled
+ * @cssprop --metal-button-border-color--disabled
+ * @cssprop --metal-button-box-shadow-disabled
  * 
  */
 export class MetalButtonElement extends MetalElement {
