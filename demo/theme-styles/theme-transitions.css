@@ -1,3 +1,4 @@
 html, body {
-  --metal-transition-time: 0.3s;
+  --metal-transition-duration: 0.3s;
+  --metal-transition-timing-function: ease;
 }

@@ -40,8 +40,8 @@ input
   border-radius 0
   display block 
 
-  transition-duration var(--metal-input-transition-duration, var(--metal-transition-duration, 0.5s))
-  transition-timing-function var(--metal-input-transition-timing-function, var(--metal-transition-timing-function, ease))
+  transition-duration var(--metal-input-transition-duration, var(--metal-transition-duration))
+  transition-timing-function var(--metal-input-transition-timing-function, var(--metal-transition-timing-function))
   transition-property background, color, border-color
 
 input:focus
@@ -68,13 +68,15 @@ input:disabled
   color var(--metal-input-placeholder-color, var(--metal-color-dark--50))
   user-select none
   pointer-events none
-  transition 0.3s transform ease
   transform-origin 0 0
   transform none
   font-family var(--metal-input-placeholder-font-family, var(--metal-typo-c1-font-family))
   font-size var(--metal-input-placeholder-font-size, var(--metal-typo-b1-font-size))
   font-weight var(--metal-input-placeholder-font-weight, var(--metal-typo-c1-font-weight))
   left var(--metal-input-padding, var(--metal-size--4))
+  transition-duration var(--metal-input-label-transition-duration, var(--metal-transition-duration))
+  transition-timing-function var(--metal-input-label-transition-timing-function, var(--metal-transition-timing-function))
+  transition-property transform
 
 input:not([value='']) + #placeholder 
   transform scale(0.75) translateY(-46px)
