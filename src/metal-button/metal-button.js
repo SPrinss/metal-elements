@@ -40,7 +40,7 @@ export class MetalButtonElement extends MetalButtonMixin(HTMLElement) {
 
   get template() {
     return html`
-      <!-- <link rel="stylesheet" href="../src/metal-button/metal-button.css"> -->
+      <link rel="stylesheet" href="../src/metal-button/metal-button.css">
       ${html`${this.metalTemplate}`}
     `;
   }

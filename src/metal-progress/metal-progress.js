@@ -14,7 +14,7 @@ export class MetalProgressElement extends MetalProgressMixin(HTMLElement) {
 
   get template() {
     return html`
-      <!-- <link rel="stylesheet" href="../src/metal-progress/metal-progress.css"> -->
+      <link rel="stylesheet" href="../src/metal-progress/metal-progress.css">
       ${this.metalTemplate}
     `;
   }

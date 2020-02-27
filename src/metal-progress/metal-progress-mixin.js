@@ -35,7 +35,7 @@ const MetalProgressMixin = (SuperClass) => class extends MetalElementMixin(Super
       solid: {
         set: Boolean,
         attribute: 'solid',
-        defaultValue: true
+        defaultValue: false
       }
     };
   }
