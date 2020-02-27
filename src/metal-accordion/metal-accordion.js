@@ -10,16 +10,37 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html';
  * @fires values-changed The values of the data-accname attribute set in the slotted items.
  * @fires selected-index-changed The index of the slotted item that is shadown
  * 
- * @cssprop --metal-accordion-button-background
- * @cssprop --metal-accordion-button-background--hover
- * @cssprop --metal-accordion-button-background--active
- * @cssprop --metal-accordion-button-color
- * @cssprop --metal-accordion-color--active
- * @cssprop --metal-accordion-color--focus
- * @cssprop --metal-accordion-color--hover
  * @cssprop --metal-accordion-container-background
- * @cssprop --metal-accordion-container-margin-bottom
- * @cssprop --metal-accordion-container-color
+ * @cssprop --metal-accordion-container-border-color
+ * @cssprop --metal-accordion-container-border-color
+ * @cssprop --metal-accordion-container-margin
+ * @cssprop --metal-accordion-container-padding
+ * 
+ * @cssprop --metal-accordion-button-text-align
+ * @cssprop --metal-accordion-button-height
+ * @cssprop --metal-accordion-button-border-radius
+ * @cssprop --metal-accordion-button-background
+ * @cssprop --metal-accordion-button-color
+ * @cssprop --metal-accordion-button-border-color
+ * @cssprop --metal-accordion-button-border-width
+ * @cssprop --metal-accordion-button-background--hover
+ * @cssprop --metal-accordion-button-color--hover
+ * @cssprop --metal-accordion-button-border-color--hover
+ * @cssprop --metal-accordion-button-border-width--hover
+ * @cssprop --metal-accordion-button-background--active
+ * @cssprop --metal-accordion-button-color--active
+ * @cssprop --metal-accordion-button-border-color--active
+ * @cssprop --metal-accordion-button-border-width--active
+ * @cssprop --metal-accordion-button-background--selected
+ * @cssprop --metal-accordion-button-color--selected
+ * @cssprop --metal-accordion-button-border-color--selected
+ * @cssprop --metal-accordion-button-border-width--selected
+ * 
+ * @cssprop --metal-accordion-item-background
+ * @cssprop --metal-accordion-item-color
+ * @cssprop --metal-accordion-font-family
+ * @cssprop --metal-accordion-font-weight
+ * @cssprop --metal-accordion-font-size
  * 
  */
 export class MetalAccordionElement extends MetalElement {
