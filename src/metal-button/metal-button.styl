@@ -7,7 +7,7 @@
   vertical-align middle
   outline none
 
-#button
+button
   metal-typo-reset()
   font-family var(--metal-button-font-family, var(--metal-typo-h6-font-family))
   font-size var(--metal-button-font-size, var(--metal-typo-h6-font-size))
@@ -40,40 +40,29 @@
   transition-timing-function var(--metal-button-transition-timing-function, var(--metal-transition-timing-function))
   transition-property background, color, border-color
 
-#button[data-icon]
-  min-width var(--metal-button-height, var(--metal-size--9))
-  border-radius var(--metal-button-border-radius, 50%)
-  padding 0
-
-:host(:focus) #button
+button:focus
   pointer-events none
   box-shadow var(--metal-button-box-shadow--focus, var(--metal-box-shadow--3))
 
-:host(:hover) #button
+button:hover
   background var(--metal-button-background--hover, var(--metal-color-main--80))
   color var(--metal-button-color--hover, var(--metal-color-light--100))
   border-color var(--metal-button-border-color--hover, var(--metal-color-main--100))
 
-:host(:active) #button
+button:active
   background var(--metal-button-background--active, var(--metal-color-light--100))
   color var(--metal-button-color--active, var(--metal-color-main--100))
   border-color var(--metal-button-border-color--active, var(--metal-color-main--100))
 
-:host([disabled]) #button
+button[disabled]
   background var(--metal-button-background--disabled, var(--metal-color-main--60))
   color var(--metal-button-color--disabled, var(--metal-color-light--70))
   border-color var(--metal-button-border-color--disabled, var(--metal-color-main--60))
   box-shadow: var(--metal-button-box-shadow-disabled, var(--metal-box-shadow--0))
   cursor default
 
-span 
+::slotted(*) 
   flex 1
   white-space nowrap
   text-overflow ellipsis
   overflow hidden
-
-span:not([hidden]) + metal-icon
-  padding-left var(--metal-size--4)
-
-metal-icon 
-  flex none

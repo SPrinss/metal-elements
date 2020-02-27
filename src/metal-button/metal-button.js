@@ -1,4 +1,4 @@
-import { MetalElement, html } from '../metal-element.js';
+import { MetalButtonMixin, html } from './metal-button-mixin.js';
 
 /**
  * Metal Elements Button
@@ -36,87 +36,13 @@ import { MetalElement, html } from '../metal-element.js';
  * @cssprop --metal-button-box-shadow-disabled
  * 
  */
-export class MetalButtonElement extends MetalElement {
-
-  static get properties() {
-    return { 
-      /**
-       * Whether the user can interact with the button
-       * @type {boolean} 
-       * @attr disabled
-       * @default false
-       */
-      disabled: {
-        set: Boolean,
-        attribute: 'disabled',
-        defaultValue: false,
-        changedHandler: '_disabledChanged'
-      },
-      /**
-       * What, if any, icon should be displayed on the button. Leave empty to hide icon.
-       * @type {string} 
-       * @attr icon
-       */
-      icon: {
-        set: String,
-        attribute: 'icon',
-        changedHandler: '_iconChanged'
-      },
-      /**
-       * What, if any, text should be displayed on the button. Leave empty to hide text.
-       * @type {string} 
-       * @default ''
-       */
-      value: {
-        set: String,
-        defaultValue: ''
-      }
-
-    };
-  }
-
-  static get ensuredAttributes() {
-    return { tabindex: 0, role: 'button' }
-  }
-
-  static get keyBindings() {
-    return {
-      'click': {key: 'Enter'}
-    }
-  }
-   
-  connectedCallback() {
-    super.connectedCallback();
-    this.shadowRoot.addEventListener('slotchange', this._handleSlotChange.bind(this));
-  }
+export class MetalButtonElement extends MetalButtonMixin(HTMLElement) {
 
   get template() {
     return html`
-      <link rel="stylesheet" href="../src/metal-button/metal-button.css">
-      <div id="button" ?data-icon="${!this._hasLabel}" ?disabled="${this.disabled}">
-        <span ?hidden="${!this._hasLabel}"><slot></slot></span>
-        ${this.icon ? html`<metal-icon icon="${this.icon}"></metal-icon>` : html`` }
-      </div>
+      <!-- <link rel="stylesheet" href="../src/metal-button/metal-button.css"> -->
+      ${html`${this.metalTemplate}`}
     `;
-  }
-
-  _handleSlotChange(e) {
-    this._hasLabel = e.target.assignedNodes().length > 0;
-  }
-
-  _iconChanged(icon) {
-    if(icon) import('../metal-icon/metal-icon.js');
-  }
-
-  _disabledChanged(disabled) {
-    if(disabled) {
-      this._tabIndex = this.getAttribute('tabindex') || this.constructor.ensuredAttributes.tabIndex || 0;
-      this.setAttribute('tabindex', -1);
-      this.setAttribute('aria-disabled', 'true');
-    } else {
-      this.removeAttribute('aria-disabled');
-      if(this._tabIndex) this.setAttribute('tabindex', this._tabIndex || this.constructor.ensuredAttributes.tabIndex);
-    }
   }
 
 }
