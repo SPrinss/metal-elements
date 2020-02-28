@@ -81,7 +81,10 @@ export class MetalButtonElement extends MetalElement {
 
   static get keyBindings() {
     return {
-      'click': {key: 'Enter'}
+      'click': [
+        {code: 'Enter'},
+        {code: 'Space'},
+      ]
     }
   }
    

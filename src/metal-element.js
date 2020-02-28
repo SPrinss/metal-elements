@@ -49,13 +49,24 @@ class MetalElement extends EnsuredAttributes(Property(HTMLElement)) {
 
   __handleKeydown(e) {
     for(var methodName in this.constructor.keyBindings) {
-      const requirements = this.constructor.keyBindings[methodName];
-      let requirementsMet = 0;
-      for(var requirement in requirements) {
-        if(e[requirement] === requirements[requirement]) requirementsMet++;
-      }
-      if(requirementsMet === Object.keys(requirements).length) this[methodName].call(this, e);
+      this.__handleKeybindingMethod(e, methodName);
     }
+  }
+
+  __handleKeybindingMethod(e, methodName) {
+    const requirementSets = this.constructor.keyBindings[methodName];
+    for(let i in requirementSets) {
+      this.__handleKeybindingRequirementSet(e, methodName, requirementSets[i]);
+    }
+  }
+
+  __handleKeybindingRequirementSet(e, methodName, requirementSet) {
+    const requirements = requirementSet;
+    let requirementsMet = 0;
+    for(var requirement in requirements) {
+      if(e[requirement] === requirements[requirement]) requirementsMet++;
+    }
+    if(requirementsMet === Object.keys(requirements).length) this[methodName].call(this, e);
   }
 
   static get keyBindings() {
