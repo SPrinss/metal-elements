@@ -93,9 +93,11 @@ export class MetalButtonElement extends MetalElement {
   get template() {
     return html`
       <link rel="stylesheet" href="../src/metal-button/metal-button.css">
-      <div id="button" ?data-icon="${!this._hasLabel}" ?disabled="${this.disabled}">
+      <div>
+      <button ?data-icon="${!this._hasLabel}" disabled>
         <span ?hidden="${!this._hasLabel}"><slot></slot></span>
         ${this.icon ? html`<metal-icon icon="${this.icon}"></metal-icon>` : html`` }
+      </button>
       </div>
     `;
   }
