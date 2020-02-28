@@ -76,7 +76,7 @@ export class MetalButtonElement extends MetalElement {
   }
 
   static get ensuredAttributes() {
-    return { tabindex: 0, role: 'button' }
+    return { tabindex: 0, role: 'button' };
   }
 
   static get keyBindings() {
@@ -85,7 +85,7 @@ export class MetalButtonElement extends MetalElement {
         {code: 'Enter'},
         {code: 'Space'},
       ]
-    }
+    };
   }
    
   connectedCallback() {
@@ -126,4 +126,4 @@ export class MetalButtonElement extends MetalElement {
 
 }
 
-window.customElements.define('metal-button', MetalButtonElement)
+window.customElements.define('metal-button', MetalButtonElement);

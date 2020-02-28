@@ -6,7 +6,7 @@ import { MetalElement, html } from '../metal-element.js';
  * 
  */
 
-  export class MetalIconElement extends MetalElement {
+export class MetalIconElement extends MetalElement {
 
   static get properties() {
     return {
@@ -42,7 +42,7 @@ import { MetalElement, html } from '../metal-element.js';
     return html`
       <link rel="stylesheet" href="../src/metal-icon/metal-icon.css">
       ${this.icon}
-    `
+    `;
   }
 
 }

@@ -70,7 +70,7 @@ class MetalElement extends EnsuredAttributes(Property(HTMLElement)) {
   }
 
   static get keyBindings() {
-    return {}
+    return {};
   }
 
 }
