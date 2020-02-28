@@ -1,6 +1,6 @@
 {
   "name": "metal-elements",
-  "version": "0.0.1",
+  "version": "0.0.11",
   "description": "Custom elements suite build on browser native functionality and some small mixins",
   "main": "dist/index.js",
   "scripts": {
@@ -34,7 +34,8 @@
     "stylesheet-inliner": "^0.4.0",
     "stylus": "^0.54.7",
     "web-component-analyzer": "^1.0.3",
-    "api-viewer-element": "^0.2.6"
+    "api-viewer-element": "^0.2.6",
+    "release-it": "^12.6.0"
   },
   "files": [
     "dist"
@@ -53,5 +54,10 @@
     "web-components",
     "standards",
     "html-element-mixins"
-  ]
+  ],
+  "release-it": {
+    "github": {
+      "release": true
+    }
+  }
 }
