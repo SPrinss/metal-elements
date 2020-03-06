@@ -50,16 +50,6 @@ export class MetalRadioElement extends MetalElement {
         defaultValue: false,
         attribute: 'checked',
         changedEventName: 'checked-changed'
-      },
-      /**
-       * The label that's displayed next to the radio
-       * @type {string} 
-       * @attr label
-       * @default ''
-       */
-      label: {
-        set: String,
-        attribute: 'label'
       }
     };
   }
