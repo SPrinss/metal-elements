@@ -1,6 +1,6 @@
 {
   "name": "metal-elements",
-  "version": "0.0.12",
+  "version": "0.0.20",
   "description": "Custom elements suite build on browser native functionality and some small mixins",
   "main": "dist/index.js",
   "scripts": {
