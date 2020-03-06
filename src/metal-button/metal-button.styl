@@ -100,7 +100,8 @@ span
   overflow hidden
 
 span:not([hidden]) + metal-icon
-  padding-left var(--metal-size--4)
+  padding-left var(--metal-button-icon-padding-left, var(--metal-size--4))
 
 metal-icon 
   flex none
+  font-size: var(--metal-button-icon-font-size, var(--metal-button-font-size, var(--metal-text-h6-font-size)));
