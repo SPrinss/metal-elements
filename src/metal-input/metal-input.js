@@ -33,7 +33,6 @@ import { MetalElement, html } from '../metal-element.js';
  * @cssprop --metal-input-placeholder-font-family
  * @cssprop --metal-input-placeholder-font-size
  * @cssprop --metal-input-placeholder-font-weight
- * @cssprop --metal-input-padding
  * @cssprop --metal-input-label-transition-duration
  * @cssprop --metal-input-label-transition-timing-function
  * @cssprop --metal-input-placeholder-color--enabled
