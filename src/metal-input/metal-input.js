@@ -36,6 +36,7 @@ import { MetalElement, html } from '../metal-element.js';
  * @cssprop --metal-input-label-transition-duration
  * @cssprop --metal-input-label-transition-timing-function
  * @cssprop --metal-input-placeholder-color--enabled
+ * @cssprop --metal-input-placeholder-color--disabled
  * @cssprop --metal-input-border-color--invalid
  * @cssprop --metal-input-placeholder-color--invalid
  */
