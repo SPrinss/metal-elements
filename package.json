@@ -1,10 +1,9 @@
 {
   "name": "metal-elements",
-  "version": "0.0.20",
+  "version": "0.1.0",
   "description": "Custom elements suite build on browser native functionality and some small mixins",
   "main": "dist/index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "Wouter Vroege & Sam Prinssen",
   "license": "MIT",
   "repository": {
