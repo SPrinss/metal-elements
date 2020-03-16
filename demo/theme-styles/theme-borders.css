@@ -1,5 +1,0 @@
-html, body {
-  --metal-border--1: calc( var(--metal-size--1) / 4 );
-  --metal-border--2: calc( var(--metal-size--1) / 2 );
-  --metal-border--3: var(--metal-size--1);
-}

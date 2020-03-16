@@ -4,43 +4,7 @@
   "description": "Custom elements suite build on browser native functionality and some small mixins",
   "main": "dist/index.js",
   "scripts": {
-    "start": "npm run docs && concurrently --kill-others \"npm run start:server::watch\" \"npm run compile:styles::watch\"",
-    "start:server::watch": "es-dev-server --app-index demo/index.html --http2 --node-resolve --watch --open",
-    "format": "npm run format:javascript",
-    "format:javascript": "eslint --ext .js . --fix --ignore-path .gitignore",
-    "docs": "wca analyze src/ --outFile demo/custom-elements.json",
-    "compile": "npm run compile:styles",
-    "compile:styles": "npm run compile:styles",
-    "compile:styles::watch": "stylus src/**/*.styl -w",
-    "compile:styles::dist": "stylus dist/**/*.styl",
-    "build": "npm run build:init && npm run build:styles && npm run build:finish",
-    "build:init": "rimraf dist && copyfiles -u 1 ./src/** dist && copyfiles -u 1 ./src/**/** dist",
-    "build:styles": "npm run compile:styles::dist && stylesheet-inliner --input=dist/**/**.js",
-    "build:finish": "del dist/**/**.styl !dist/metal-styles/**.styl && del dist/**/**.css",
-    "prepublish": "npm run build"
   },
-  "dependencies": {
-    "html-element-mixins": "^0.2.4",
-    "lit-html": "^1.1.2"
-  },
-  "devDependencies": {
-    "concurrently": "^5.1.0",
-    "copyfiles": "^2.2.0",
-    "del-cli": "^3.0.0",
-    "es-dev-server": "^1.40.0",
-    "eslint": "^6.6.0",
-    "magic-string": "^0.25.6",
-    "rimraf": "^2.6.3",
-    "stylesheet-inliner": "^0.4.0",
-    "stylus": "^0.54.7",
-    "web-component-analyzer": "^1.0.3",
-    "api-viewer-element": "^0.2.6",
-    "release-it": "^12.6.0",
-    "husky": "^3.0.9"
-  },
-  "files": [
-    "dist"
-  ],
   "author": "Wouter Vroege & Sam Prinssen",
   "license": "MIT",
   "repository": {
@@ -51,11 +15,6 @@
     "url": "https://github.com/SPrinss/metal-elements/issues"
   },
   "homepage": "https://github.com/SPrinss/metal-elements#readme",
-  "keywords": [
-    "web-components",
-    "standards",
-    "html-element-mixins"
-  ],
   "husky": {
     "hooks": {
       "pre-commit": "npm run format"
